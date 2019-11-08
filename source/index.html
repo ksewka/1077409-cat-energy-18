@@ -5,8 +5,56 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
+    <header class="page-header">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+      <div class="page-header__logo-block">
+        <p class="page-header__logo-title">Cat Energy</p>
+        <a class="page-header__logo" href="#">
+          <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Логотип магазина Cat Energy">
+        </a>
+      </div>
 
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button" name="button">Открыть меню</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="program">
+        <h1 class="program__title">Функциональное питание для котов</h1>
+        <b class="program__slogan">Занялся собой? Займись котом!</b>
+        <p class="program__picture">
+          <img class="program__image" src="https://via.placeholder.com/150x150" alt="Функциональное питание для котов">
+        </p>
+        <a class="program__pick-up button" href="#">Подобрать программу</a>
+      </section>
+
+      <section class="sort">
+        <ul class="sort__list">
+          <li class="sort__item sort__item--slim">
+            <h2 class="sort__title">Похудение</h2>
+            <p class="sort__description">
+              Ваш кот весит больше собаки и
+              почти утратил способность лазить
+              по деревьям? Пора на диету! Cat
+              Energy Slim поможет вашему
+              питомцу сбросить лишний вес.</p>
+              <a class="sort__go-to--slim"href="#">Каталог Slim</a>
+          </li>
+
+          <li class="sort__item sort__item--pro">
+            <h2 class="sort__title">Набор массы</h2>
+            <p class="sort__description">
+              Заработать авторитет среди
+              дворовых котов и даже собак?
+              Серия Cat Energy Pro поможет
+              вашему коту нарастить
+              необходимые мышцы!</p>
+              <a class="sort__go-to--pro"href="#">Каталог Pro</a>
+          </li>
+
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
