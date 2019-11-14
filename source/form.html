@@ -5,7 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
-  <body>
+  <body class="form-page">
     <header class="page-header">
 
       <div class="page-header__logo-block">
@@ -20,7 +20,138 @@
       </nav>
     </header>
 
+    <main class="page-main">
+      <section class="page-main__form form">
+        <h1 class="form__title">Подбор программы</h1>
+        <p class="form__text">Заполните анкету и мы подберем
+          программу питания для вашего кота</p>
 
+        <form class="form__request request" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="request__info info">
+            <legend class="visually-hidden">Информация о питомце</legend>
+            <ul class="info__list">
+              <li class="info__item info__item--name">
+                <label for="name">Имя:*</label>
+                <input type="text" name="name" id="name">
+              </li>
+              <li class="info__item info__item--weight">
+                <label for="weight">Вес (кг):*</label>
+                <input type="text" name="weight" id="weight">
+              </li>
+              <li class="info__item info__item--age">
+                <label for="age">Возраст (лет):</label>
+                <input type="text" name="age" id="age">
+              </li>
+          </ul>
+          </fieldset>
+
+          <fieldset class="request__aim aim">
+            <legend class="visually-hidden">Цель</legend>
+            <ul class="aim__list">
+              <li class="aim__item goal">
+                <label class="goal__radio">
+                  <input class="visually-hidden" type="radio" name="weight" value="lose-weight">
+                  <span class="goal__indicator"></span>
+                  Похудение
+                </label>
+              </li>
+
+              <li class="aim__item goal">
+                <label class="goal__radio">
+                  <input class="visually-hidden" type="radio" name="weight" value="grow-weight">
+                  <span class="goal__indicator"></span>
+                  Набор массы
+                </label>
+              </li>
+
+              <li class="aim__item goal">
+                <label class="goal__radio">
+                  <input class="visually-hidden" type="radio" name="weight" value="advice">
+                  <span class="goal__indicator"></span>
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </li>
+
+            </ul>
+          </fieldset>
+
+          <fieldset class="request__contacts contacts">
+            <legend class="contacts__title">Контактные данные(владельца кота)</legend>
+            <ul class="contacts__list">
+              <li class="contacts__item contacts__item--email">
+                <label for="email">E-mail:*</label>
+                <input id="email" type="text" name="email">
+              </li>
+              <li class="contacts__item contacts__item--phone">
+                <label for="phone">Телефон:*</label>
+                <input id="phone" type="text" name="phone">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="request-massege massege">
+            <legend class="massege__title">Комментарий</legend>
+            <textarea name="massege" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <div class="request__additional surplus">
+            <h2 class="surplus__title">Дополнительно</h2>
+            <ul class="surplus__list">
+              <li class="surplus__item">
+                <label class="surplus__checkbox">
+                  <input class="visually-hidden" type="checkbox" name="additional" value="sugar">
+                  <span class="checkbox-indicator"></span>
+                  Сахарозаменитель
+                </label>
+              </li>
+
+              <li class="surplus__item">
+                <label class="surplus__checkbox">
+                  <input class="visually-hidden" type="checkbox" name="additional" value="water">
+                  <span class="checkbox-indicator"></span>
+                  Питьевая вода
+                </label>
+              </li>
+
+              <li class="surplus__item">
+                <label class="surplus__checkbox">
+                  <input class="visually-hidden" type="checkbox" name="additional" value="milk">
+                  <span class="checkbox-indicator"></span>
+                  Молоко
+                </label>
+              </li>
+
+              <li class="surplus__item">
+                <label class="surplus__checkbox">
+                  <input class="visually-hidden" type="checkbox" name="additional" value="vitamin">
+                  <span class="checkbox-indicator"></span>
+                  Витамины
+                </label>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" name="button">Отправить заявку</button>
+          <small class="form__required-field">
+            <sup>*</sup>&mdash; Обязательные поля
+          </small>
+        </form>
+      </section>
+
+      <section class="main-page__dealer-invite dealer">
+        <h3 class="dealer__title">
+          Приглашаем к сотрудничеству дилеров!
+        </h3>
+        <p class="dealer__address">
+          ул. Большая Конюшенная, д. 19/8
+          Санкт-Петербург
+        </p>
+      </section>
+
+      <section class="main-page__address address">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CGT7vIJQ" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+      </section>
+    </main>
 
     <footer class="page-footer">
       <p class="page-footer__logo-title">Cat Energy</p>
