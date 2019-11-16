@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body{
+  width: 320px;
+  background-color: white;
+  outline: 1px solid white;
+}
+
+a{
+  text-decoration: none;
+}
+
+.button{
+  width: 280px;
+  height: 40px;
+  background-color: @leaf;
+  padding-top: 12px;
+  text-align: center;
+}
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
