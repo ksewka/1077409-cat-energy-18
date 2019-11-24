@@ -1,5 +1,19 @@
 .example {
+  margin-bottom: 30px;
+  background-color: @grey-back;
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
+    padding: 0;
+    margin: 0;
+    margin-left: 18px;
+    margin-top: 15px;
+    margin-bottom: 23px;
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 36px;
     font-weight: 400;
@@ -9,6 +23,11 @@
   }
 
   &__text {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    width: 266px;
+    margin-left: 18px;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;

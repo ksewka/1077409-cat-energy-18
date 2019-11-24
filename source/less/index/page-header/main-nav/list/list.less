@@ -1,0 +1,23 @@
+.list {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+
+  &__item {
+    min-height: 65px;
+    border-top: 1px solid @grey-back;
+  }
+
+  &__link {
+    display: block;
+    font-family: @oswald;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    color: @black-one;
+    text-transform: uppercase;
+    padding-top: 22px;
+  }
+}

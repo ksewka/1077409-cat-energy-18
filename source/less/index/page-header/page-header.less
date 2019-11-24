@@ -1,0 +1,39 @@
+.page-header {
+
+  &__logo-block {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-left: 20px;
+    min-height: 65px;
+  }
+
+  &__logo {
+    display: block;
+    width: 191px;
+    order: 1;
+    background-image: url("../img/logo-mobile-header.png");
+    background-repeat: no-repeat;
+  }
+
+  &__toggle {
+    width: 25px;
+    height: 19px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url("../img/mobile-menu-svg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    order: 2;
+  }
+
+  &__main-nav {
+    order: 3;
+  }
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+}

@@ -1,5 +1,15 @@
 .features {
+  margin-bottom: 40px;
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+
   &__title {
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 20px;
     font-family: @oswald;
     font-size: 36px;
     font-weight: 400;
@@ -9,7 +19,15 @@
   }
 
   &__list {
+    .list-reset();
     list-style: none;
+    padding-top: 18px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-left: 100px;
+    min-height: 60px;
   }
 
   &__description {
@@ -21,3 +39,27 @@
     color: @greyish-brown;
   }
 }
+
+  .feature__item--healthy {
+    background-image: url("../img/advantage-1.png");
+    background-repeat: no-repeat;
+    background-position: 20px -5px;
+  }
+
+  .feature__item--form {
+    background-image: url("../img/andvantage-2.png");
+    background-repeat: no-repeat;
+    background-position: 20px -5px;
+  }
+
+  .feature__item--change {
+    background-image: url("../img/advantage-3.png");
+    background-repeat: no-repeat;
+    background-position: 20px -5px;
+  }
+
+  .feature__item--result {
+    background-image: url("../img/advantage-4.png");
+    background-repeat: no-repeat;
+    background-position: 20px -5px;
+  }

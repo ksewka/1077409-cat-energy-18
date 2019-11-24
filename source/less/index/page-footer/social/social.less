@@ -1,5 +1,29 @@
 .social {
+  margin-left: 80px;
+  padding-top: 24px;
+  padding-bottom: 15px;
+  border-top:  1px solid @border;
+  border-bottom: 1px solid @border;
   &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 122px;
+    .list-reset();
     list-style: none;
+  }
+
+  &__icon--vk {
+    width: 22px;
+    height: 12px;
+  }
+
+  &__icon--insta {
+    width: 17px;
+    height: 17px;
+  }
+
+  &__icon--fb {
+    width: 10px;
+    height: 19px;
   }
 }
