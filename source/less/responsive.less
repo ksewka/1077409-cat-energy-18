@@ -404,6 +404,10 @@ body {
           display: block;
         }
 
+        &__item--before-desktop {
+          display: none;
+        }
+
         &__item--before {
           display: none;
         }
@@ -532,7 +536,7 @@ body {
   .page-header {
     &__wrapper {
       width: 1220px;
-      margin-left: 110px;
+      margin: 0 auto;
       padding-top: 53px;
     }
 
@@ -586,7 +590,7 @@ body {
       margin-top: 50px;
       margin-left: 80px;
       padding-top: 15px;
-      margin-bottom: 260px;
+      margin-bottom: 265px;
     }
 
     &__slogan {
@@ -601,7 +605,7 @@ body {
     height: 696px;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     z-index: -9999;
@@ -609,9 +613,11 @@ body {
 
   /*Адаптивный sort -desktop*/
   .sort {
+    margin-bottom: 73px;
     &__wrapper {
       width: 1220px;
       margin:0 auto;
+      display: flex;
     }
     &__list {
       display: flex;
@@ -622,10 +628,17 @@ body {
     &__item {
       min-width: 570px;
       min-height: 372px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
+
+    &__item:nth-child(2n) {
+      margin-right: 0;
     }
 
     &__title {
-      margin-top: 90px;
+      margin-top: 75px;
       margin-left: 215px;
       margin-bottom: 75px;
     }
@@ -634,14 +647,14 @@ body {
       background-image: url("../img/cat-slim-desktop.png");
       background-size: 100px 100px;
       background-repeat: no-repeat;
-      background-position: 52px 55px;
+      background-position: 52px 45px;
     }
 
     &__item--pro {
       background-image: url("../img/cat-pro-desktop.png");
       background-size: 135px 100px;
       background-repeat: no-repeat;
-      background-position: 52px 55px;
+      background-position: 35px 45px;
     }
 
     &__description{
@@ -654,4 +667,168 @@ body {
     }
   }
 
+  /*Адаптивный features-desktop*/
+  .features {
+    margin-bottom: 0;
+    &__wrapper {
+      width: 1220px;
+      margin: 0 auto;
+    }
+
+    &__item:nth-child(n) {
+      margin-right: 80px;
+    }
+
+    &__item:nth-child(4n) {
+      margin-right: 0;
+    }
+
+  }
+
+  /*Адаптивный example -desktop*/
+
+  .example {
+    position: relative;
+    &__wrapper--all {
+      width: 1220px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    &__wrapper {
+      margin: 0;
+      margin-right: 180px;
+    }
+    &__title {
+      margin-top: -25px;
+      margin-left: 0;
+      margin-bottom: 122px;
+    }
+
+    &__text {
+      margin-left: 0;
+      margin-bottom: 71px;
+      width: 435px;
+      color: @greyish-brown;
+      z-index: 1
+    }
+  }
+
+    .example::before {
+      content: "";
+      width: 100%;
+      height: 462px;
+      background-color: @grey;
+      position: absolute;
+      top: 130px;
+      left: 0;
+      z-index: 0;
+    }
+
+  .result {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      background-color: @grey;
+    }
+    &__block {
+      margin-bottom: 42px;
+      z-index: 1;
+    }
+
+    &__price {
+      margin-left: 0;
+      width: 325px;
+      margin-right: 50px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+  }
+
+  /*Адаптивный slider-desktop*/
+    .slider {
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+      &__wrapper {
+        background-color: transparent;
+      }
+      &__item--before-tablet{
+        display: none;
+      }
+
+      &__item--before-desktop {
+        display: block;
+      }
+
+      &__list {
+        margin-top: -80px;
+        margin-left: -170px;
+        margin-bottom: 0;
+      }
+    }
+
+    .controls {
+      width: 570px;
+      margin-top: 33px;
+      margin-right: 80px;
+    }
+
+    /*Адаптивный dealer-desktop*/
+    .dealer {
+      position: relative;
+      margin: 0;
+
+      &__wrapper{
+        position: absolute;
+        top:95px;
+        left: 110px;
+        padding-top: 69px;
+        padding-left: 76px;
+        padding-right: 90px;
+        width: 570px;
+        height: 200px;
+        background-color: @white;
+      }
+
+      &__title {
+        padding: 0;
+        margin: 0;
+        margin-right: 33px;
+      }
+      &__address {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+      }
+
+      &__city {
+        margin-top: 20px;
+      }
+    }
+
+    /*Адаптивный address-desktop*/
+
+    .address {
+      &__wrapper {
+        width: 1440px;
+        margin: 0 auto;
+      }
+    }
+
+    /*Адаптивный footer-desktop*/
+
+    .page-footer{
+      padding-top: 70px;
+      &__wrapper {
+        width: 1220px;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
+    }
 }
