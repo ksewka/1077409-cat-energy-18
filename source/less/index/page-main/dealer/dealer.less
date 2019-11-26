@@ -1,5 +1,6 @@
 .dealer {
   margin-bottom: 28px;
+
   &__wrapper {
     width: 320px;
     margin: 0 auto;
@@ -29,5 +30,69 @@
     line-height: 1.43;
     text-align: left;
     color: @greyish-brown;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .dealer {
+    margin-top: 69px;
+    margin-bottom: 59px;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin-left: 40px;
+      margin-right: 320px;
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: left;
+    }
+
+    &__address {
+      margin-right: 40px;
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .dealer {
+    margin: 0;
+    position: relative;
+
+    &__wrapper {
+      position: absolute;
+      top: 95px;
+      left: 110px;
+      padding-top: 69px;
+      padding-left: 76px;
+      padding-right: 90px;
+      width: 570px;
+      height: 200px;
+      background-color: @white;
+    }
+
+    &__title {
+      padding: 0;
+      margin: 0;
+      margin-right: 33px;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    &__city {
+      margin-top: 20px;
+    }
   }
 }

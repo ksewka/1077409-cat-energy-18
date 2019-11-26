@@ -1,6 +1,6 @@
 .copyright {
   display: flex;
-  padding-top: 28px;
+  padding-top: 31px;
 
   &__link {
     margin-left: 3px;
@@ -16,5 +16,17 @@
 
   &__logo {
     margin-top: -5px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-top: 0;
+
+    &__link {
+      margin-right: 20px;
+      padding-top: 5px;
+      display: inline-block;
+    }
   }
 }

@@ -1,12 +1,14 @@
 .social {
   margin-left: 80px;
-  padding-top: 24px;
+  padding-top: 20px;
   padding-bottom: 15px;
-  border-top:  1px solid @border;
+  border-top: 1px solid @border;
   border-bottom: 1px solid @border;
+
   &__list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 122px;
     .list-reset();
     list-style: none;
@@ -25,5 +27,37 @@
   &__icon--fb {
     width: 10px;
     height: 19px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    padding: 0;
+    margin-left: 155px;
+    margin-right: 135px;
+
+    &__list {
+      width: 126px;
+    }
+
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &__icon--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &__icon--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &__icon--fb {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

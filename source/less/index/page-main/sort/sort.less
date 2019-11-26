@@ -1,5 +1,6 @@
 .sort {
   margin-bottom: 15px;
+
   &__wrapper {
     width: 320px;
     margin: 0 auto;
@@ -28,10 +29,7 @@
 
   &__title {
     padding: 0;
-    margin: 0;
-    margin-top: 27px;
-    margin-left: 92px;
-    margin-bottom: 32px;
+    margin: 27px 0 32px 92px;
     font-family: @oswald;
     font-size: 24px;
     font-weight: 400;
@@ -43,9 +41,7 @@
 
   &__description {
     padding: 0;
-    margin: 0;
-    margin-left: 21px;
-    margin-bottom: 21px;
+    margin: 0 0 21px 21px;
     width: 225px;
     font-family: "Arial", sans-serif;
     font-size: 14px;
@@ -80,8 +76,9 @@
     background-image: url("../img/right-arrow.png");
     background-size: 25px 12px;
     background-repeat: no-repeat;
-    background-position: 23px 5px;
+    background-position: 11px 0;
   }
+
   &__item--slim {
     background-image: url("../img/cat-slim.png");
     background-repeat: no-repeat;
@@ -92,5 +89,124 @@
     background-image: url("../img/cat-pro.png");
     background-repeat: no-repeat;
     background-position: 15px 22px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .sort {
+    margin-bottom: 45px;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      min-width: 708px;
+      min-height: 372px;
+      margin-bottom: 39px;
+      margin-top: -10px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 1.03;
+      margin-left: 55px;
+      margin-top: 73px;
+      margin-bottom: 26px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-left: 51px;
+      margin-bottom: 37px;
+    }
+
+    &__description--slim {
+      width: 375px;
+    }
+
+    &__description--pro {
+      width: 340px;
+    }
+
+    &__go-to {
+      font-size: 20px;
+      line-height: 1;
+      margin-left: 53px;
+      border: none;
+    }
+
+    &__item--slim {
+      background-image: url("../img/cat-slim-tablet.png");
+      background-repeat: no-repeat;
+      background-position: 446px 80px;
+    }
+
+    &__item--pro {
+      background-image: url("../img/cat-pro-tablet.png");
+      background-repeat: no-repeat;
+      background-position: 410px 90px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sort {
+    margin-bottom: 73px;
+
+    &__wrapper {
+      width: 1220px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__item {
+      min-width: 570px;
+      min-height: 372px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
+
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &__title {
+      margin-top: 75px;
+      margin-left: 215px;
+      margin-bottom: 75px;
+    }
+
+    &__item--slim {
+      background-image: url("../img/cat-slim-desktop.png");
+      background-size: 100px 100px;
+      background-repeat: no-repeat;
+      background-position: 52px 45px;
+    }
+
+    &__item--pro {
+      background-image: url("../img/cat-pro-desktop.png");
+      background-size: 135px 100px;
+      background-repeat: no-repeat;
+      background-position: 35px 45px;
+    }
+
+    &__description {
+      min-width: 462px;
+      margin-bottom: 30px;
+    }
+
+    &__go-to {
+      padding: 0;
+    }
   }
 }

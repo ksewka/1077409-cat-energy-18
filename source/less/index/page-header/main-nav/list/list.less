@@ -21,3 +21,38 @@
     padding-top: 22px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .list__item {
+    margin-right: 34px;
+    border: none;
+  }
+
+  .list__item:last-child {
+    margin-right: 0;
+  }
+
+  .list__link {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .list {
+    min-width: 490px;
+
+    &__link {
+      font-family: @oswald;
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: left;
+      color: @white;
+    }
+  }
+}

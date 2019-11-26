@@ -5,7 +5,6 @@
     margin-left: 20px;
   }
 
-
   &__title {
     padding: 0;
     margin: 0;
@@ -34,6 +33,7 @@
 
   &__price {
     margin-top: 20px;
+    margin-bottom: 30px;
     font-family: @oswald;
     font-size: 14px;
     font-weight: 400;
@@ -56,5 +56,70 @@
 
   &__item:last-child {
     margin-right: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .result {
+    display: flex;
+
+    &__value {
+      font-size: 30px;
+      line-height: 1.23;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      width: 130px;
+      font-size: 14px;
+      line-height: 1;
+      background-color: @white;
+    }
+
+    &__item {
+      margin-right: 42px;
+      width: 162px;
+      background-image: url("../img/back-border-tablet.png");
+      background-repeat: no-repeat;
+    }
+
+    &__block {
+      margin-left: 0;
+    }
+
+    &__price {
+      margin-top: 12px;
+      margin-left: 167px;
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: right;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .result {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+      background-color: @grey;
+    }
+
+    &__block {
+      margin-bottom: 42px;
+      z-index: 1;
+    }
+
+    &__price {
+      margin-left: 0;
+      width: 325px;
+      margin-right: 50px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
   }
 }

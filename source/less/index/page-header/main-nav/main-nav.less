@@ -1,3 +1,14 @@
 .main-nav {
   display: inline-block;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      min-width: 450px;
+      padding-left: 10px;
+    }
+  }
+}
