@@ -137,16 +137,20 @@
           </section>
 
         <section class="main-page__slider slider">
-          <div class="slider-wrapper">
+          <div class="slider__wrapper">
             <input class="visually-hidden" id="cat-before" type="radio" name="cat" checked>
             <input class="visually-hidden" id="cat-after" type="radio" name="cat">
             <div class="slider__list">
               <picture class="slider__item slider__item--before">
-                <img src="img/before-mobile@1x.png" alt="Кот до применения функционального питания">
+                <source media="(min-width: 1440px)"  srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)"   srcset="img/before-tablet@1x.png">
+                <img src="img/before-mobile@1x.png" width="320" height="240" alt="Кот до применения функционального питания">
               </picture>
 
               <picture class="slider__item slider__item--after">
-                <img src="img/after-mobile@1x.png" alt="Кот после применения функционального питания">
+                <source media="(min-width: 1440px)"  srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Кот после применения функционального питания">
               </picture>
             </div>
             <div class="slider__controls controls">
