@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  background-color: @white;
+  outline: 1px solid @black-one;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  width: 280px;
+  background-color: @leaf;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+input[type="text"]::-webkit-input-placeholder{
+  color: @white;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.13;
+  text-align: left;
+  color: @greyish-brown;
+}
