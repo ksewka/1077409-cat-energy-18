@@ -1,6 +1,14 @@
 .info {
+  border: none;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+
   &__list {
     list-style: none;
+    .list-reset();
   }
 
   &__label {
@@ -10,6 +18,7 @@
     line-height: 1.13;
     text-align: left;
     color: @black-two;
+    text-transform: uppercase;
   }
 
   &__input {
