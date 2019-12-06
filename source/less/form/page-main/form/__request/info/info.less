@@ -1,5 +1,8 @@
 .info {
   border: none;
+  padding: 0;
+  padding-top: 5px;
+  padding-left: 9px;
 
   &__wrapper {
     width: 320px;
@@ -9,6 +12,7 @@
   &__list {
     list-style: none;
     .list-reset();
+    margin-bottom: 10px;
   }
 
   &__label {
@@ -27,9 +31,23 @@
   }
 
   &__input {
+    .input-style();
     min-height: 45px;
     opacity: 0.5;
     margin-bottom: 14px;
+    padding-left: 15px;
     border: solid 1px @pinkish-grey;
+  }
+
+  &__input--name {
+    width: 229px;
+  }
+
+  &__input--weight {
+    width: 204px;
+  }
+
+  &__input--age {
+    width: 172px;
   }
 }

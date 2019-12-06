@@ -7,8 +7,9 @@
     text-align: left;
     color: @black-two;
     cursor: pointer;
-    padding-left: 35px;
+    padding-left: 46px;
     position: relative;
+    text-transform: uppercase;
   }
 
   &__radio {
@@ -19,6 +20,22 @@
     background-color: @white;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -3px;
   }
+
+  &__radio::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: @leaf;
+    border-radius: 50%;
+    top: 8px;
+    left: 8px;
+    display: none;
+  }
+}
+
+input[type="radio"]:checked + .goal__radio::before {
+  display: block;
 }

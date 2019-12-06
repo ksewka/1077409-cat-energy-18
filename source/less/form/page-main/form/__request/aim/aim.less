@@ -1,5 +1,10 @@
 .aim {
   border: none;
+  border-top: 1px solid @border;
+  border-bottom: 1px solid @border;
+  padding: 0;
+  padding-top: 11px;
+  padding-left: 13px;
 
   &__wrapper {
     width: 320px;
@@ -8,9 +13,12 @@
 
   &__list {
     list-style: none;
+    .list-reset();
+    padding-top: 16px;
+    padding-left: 5px;
   }
 
   &__item {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 }

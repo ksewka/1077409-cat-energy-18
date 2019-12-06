@@ -37,11 +37,18 @@ a {
   overflow: hidden;
 }
 
-input[type="text"]::-webkit-input-placeholder {
-  color: @white;
+input[type="text"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: @greyish-brown;
   font-family: @oswald;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.13;
   text-align: left;
+  text-transform: uppercase;
+}
+
+input[type="text"]:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
 }
