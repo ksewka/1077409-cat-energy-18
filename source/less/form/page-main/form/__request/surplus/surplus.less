@@ -62,3 +62,39 @@
 input[type="checkbox"]:checked + .surplus__checkbox::before {
   display: block;
 }
+
+@media(min-width: @tablet-width) {
+  .surplus {
+    flex-direction: column;
+    padding: 0;
+    &__caption {
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 66px;
+      margin-left: 39px;
+    }
+
+    &__label {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    &__checkbox {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 316px;
+    }
+
+    &__item:nth-child(2n+1) {
+      margin-right: 60px;
+    }
+  }
+}

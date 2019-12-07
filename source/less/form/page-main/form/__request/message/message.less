@@ -32,6 +32,41 @@
     padding-left: 15px;
     padding-top: 11px;
     width: 280px;
-    height: 150px;
+    min-height: 150px;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .message {
+    margin-bottom: 38px;
+
+    &__title {
+      font-size: 36px;
+      line-height: 1;
+      padding-left: 37px;
+      margin-bottom: 42px;
+    }
+
+    &__title::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: -32px;
+      width: 30px;
+      height: 3px;
+      background-color: @leaf;
+    }
+
+    &__title::after {
+      width: 480px;
+      top: 37px;
+      left: 256px;
+    }
+
+    &__textarea {
+      width: 631px;
+      min-height: 174px;
+      margin-left: 38px;
+    }
   }
 }

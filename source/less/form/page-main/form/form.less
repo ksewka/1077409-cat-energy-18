@@ -3,6 +3,7 @@
     width: 320px;
     margin: 0 auto;
   }
+
   &__title {
     font-family: @oswald;
     font-size: 36px;
@@ -50,5 +51,30 @@
     text-align: center;
     color: @greyish-brown;
     padding-left: 4px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 1;
+      margin-top: 55px;
+      margin-left: 0;
+      margin-bottom: 54px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-left: 40px;
+      margin-bottom: 62px;
+      width: 325px;
+    }
   }
 }

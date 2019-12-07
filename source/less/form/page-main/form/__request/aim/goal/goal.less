@@ -39,3 +39,25 @@
 input[type="radio"]:checked + .goal__radio::before {
   display: block;
 }
+
+@media (min-width: @tablet-width) {
+  .goal {
+    &__label {
+      font-size: 20px;
+      line-height: 1;
+      padding-left: 58px;
+    }
+
+    &__radio {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__radio::before {
+      width: 18px;
+      height: 18px;
+      top: 9px;
+      left: 9px;
+    }
+  }
+}
