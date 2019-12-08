@@ -2,6 +2,7 @@
   &--form {
     border: none;
   }
+
   &__caption {
     font-family: @oswald;
     font-size: 24px;
@@ -9,7 +10,7 @@
     line-height: 1;
     text-align: left;
     color: @black-one;
-    margin-top: 23px;
+    margin-top: 14px;
     margin-bottom: 40px;
   }
 
@@ -62,39 +63,78 @@
 input[type="checkbox"]:checked + .surplus__checkbox::before {
   display: block;
 }
-
 @media(min-width: @tablet-width) {
   .surplus {
     flex-direction: column;
     padding: 0;
+
     &__caption {
       font-size: 36px;
       line-height: 1;
       margin-bottom: 66px;
+      margin-top: 20px;
       margin-left: 39px;
     }
 
     &__label {
       font-size: 20px;
       line-height: 1;
+      padding-left: 57px;
+      margin-left: 41px;
     }
 
     &__checkbox {
       width: 40px;
       height: 40px;
+      top: -5px;
+    }
+
+    &__checkbox::before {
+      top: 12px;
+      left: 8px;
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 11px;
     }
 
     &__item {
       width: 316px;
+      margin-bottom: 50px;
     }
 
     &__item:nth-child(2n+1) {
-      margin-right: 60px;
+      margin-right: 28px;
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .surplus {
+    &__caption {
+      margin-left: 0;
+    }
+
+    &__list {
+      margin-bottom: 21px;
+    }
+
+    &__item {
+      width: 245px;
+      margin-right: 80px;
+    }
+
+    &__label {
+      margin-left: 0;
+    }
+
+    &__item:nth-child(2n+1) {
+      margin-right: 80px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
     }
   }
 }

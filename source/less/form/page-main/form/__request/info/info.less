@@ -64,11 +64,26 @@
       line-height: 1;
       margin-top: 14px;
       margin-left: 30px;
-      margin-bottom: 38px;
+      margin-bottom: 36px;
+    }
+
+    &__label--name {
+      margin-right: 12px;
+    }
+
+    &__label--weight {
+      margin-right: 15px;
+    }
+
+    &__label--age {
+      margin-right: 12px;
     }
 
     &__input {
       min-height: 52px;
+      font-size: 20px;
+      line-height: 1;
+      padding-left: 19px;
     }
 
     &__input--name {
@@ -85,6 +100,33 @@
 
     &__list {
       margin-bottom: 51px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info {
+    padding: 0;
+    margin-right: 37px;
+
+    &__wrapper {
+      width: 570px;
+    }
+
+    &__label {
+      margin-left: 0;
+    }
+
+    &__input--name {
+      width: 506px;
+    }
+
+    &__input--weight {
+      width: 475px;
+    }
+
+    &__input--age {
+      width: 436px;
     }
   }
 }

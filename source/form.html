@@ -43,20 +43,21 @@
             Заполните анкету и мы подберем
             программу питания для вашего кота</p>
           <form class="form__request request" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__desktop-wrapper">
             <fieldset class="request__info info">
               <div class="info__wrapper">
                 <legend class="visually-hidden">Информация о питомце</legend>
                 <ul class="info__list">
                   <li class="info__item">
-                    <label class="info__label" for="name">Имя:*</label>
+                    <label class="info__label info__label--name" for="name">Имя:*</label>
                     <input class="info__input info__input--name" type="text" name="name" id="name" placeholder="Барсик">
                   </li>
                   <li class="info__item">
-                    <label class="info__label" for="weight">Вес (кг):*</label>
+                    <label class="info__label info__label--weight" for="weight">Вес (кг):*</label>
                     <input class="info__input info__input--weight" type="text" name="weight" id="weight" placeholder="7">
                   </li>
                   <li class="info__item">
-                    <label class="info__label" for="age">Возраст (лет):</label>
+                    <label class="info__label info__label--age" for="age">Возраст (лет):</label>
                     <input class="info__input info__input--age" type="text" name="age" id="age" placeholder="7">
                   </li>
                 </ul>
@@ -93,7 +94,7 @@
                 </ul>
               </div>
             </fieldset>
-
+            </div>
             <fieldset class="request__contacts contacts">
             <legend class="contacts__title">Контактные данные</br>(владельца кота)</legend>
             <ul class="contacts__list">

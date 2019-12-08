@@ -39,7 +39,8 @@
     text-transform: uppercase;
     width: 280px;
     margin-left: 20px;
-    margin-bottom: 19px;
+    margin-bottom: 23px;
+    border: none;
   }
 
   &__required-field {
@@ -75,6 +76,55 @@
       margin-left: 40px;
       margin-bottom: 62px;
       width: 325px;
+    }
+
+    &__button {
+      min-height: 52px;
+      font-size: 20px;
+      line-height: 1;
+      margin-left: 38px;
+      width: 283px;
+      margin-bottom: 0;
+    }
+
+    &__required-field {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 1;
+      margin-left: 61px;
+      vertical-align: super;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    &__wrapper {
+      width: 1220px;
+      margin: 0 auto;
+    }
+
+    &__desktop-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      margin-top: 70px;
+    }
+
+    &__text {
+      margin-left: 0;
+      margin-bottom: 67px;
+    }
+
+    &__button {
+      width: 568px;
+      margin-left: 0;
+    }
+
+    &__required-field {
+      margin-left: 80px;
     }
   }
 }

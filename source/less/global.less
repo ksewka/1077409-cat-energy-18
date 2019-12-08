@@ -52,3 +52,11 @@ input[type="text"]:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
+
+@media (min-width: @tablet-width) {
+  input[type="text"]::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 1;
+  }
+}

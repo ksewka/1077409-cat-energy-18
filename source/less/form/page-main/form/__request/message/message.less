@@ -67,6 +67,37 @@
       width: 631px;
       min-height: 174px;
       margin-left: 38px;
+      padding-left: 18px;
+      padding-top: 14px;
+      padding-bottom: 0;
+      font-size: 20px;
+      line-height: 1;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .message {
+    &__title {
+      padding-top: 9px;
+      padding-left: 0;
+    }
+
+    &__title::before {
+      width: 70px;
+      top: 31px;
+      left: -111px;
+    }
+
+    &__title::after {
+      width: 1113px;
+      top: 31px;
+      left: 211px;
+    }
+
+    &__textarea {
+      margin-left: 0;
+      width: 1220px;
     }
   }
 }
