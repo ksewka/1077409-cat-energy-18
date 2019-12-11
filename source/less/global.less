@@ -24,20 +24,25 @@ a {
   padding-top: 12px;
   padding-bottom: 11px;
   text-align: center;
+  cursor: pointer;
 }
 
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
+.button:hover {
+  background-color: @grass;
+}
 
+.button:active {
+  background-color: @grass;
+  opacity: 0.3;
+}
+
+.visually-hidden {
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }

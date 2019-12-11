@@ -3,17 +3,22 @@
   &__logo {
     display: block;
     width: 191px;
-    height: 39px;
+    height: 65px;
     background-image: url("../img/logo-mobile-header.png");
-    background-position: 0 5px;
+    background-position: 0 15px;
     background-repeat: no-repeat;
     margin-left: 20px;
+    margin-bottom: 0;
+  }
+
+  &__logo:hover {
+    opacity: 0.6;
   }
 
   &__wrapper {
     width: 320px;
     margin: 0 auto;
-    padding-top: 8px;
+    padding: 0;
     border-bottom: 1px solid @border;
   }
 }
@@ -60,7 +65,10 @@
       background-image: url("../img/logo-desktop-svg.svg");
       background-repeat: no-repeat;
       background-size: 203px 60px;
+      background-position: 0 0;
       width: 203px;
+      height: 65px;
+      margin: 0;
     }
   }
 }

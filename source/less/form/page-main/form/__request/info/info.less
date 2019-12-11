@@ -1,7 +1,6 @@
 .info {
   border: none;
   padding: 0;
-  padding-top: 5px;
   padding-left: 9px;
 
   &__wrapper {
@@ -13,6 +12,11 @@
     list-style: none;
     .list-reset();
     margin-bottom: 10px;
+    margin-right: 32px;
+  }
+
+  &__item {
+    display: flex;
   }
 
   &__label {
@@ -27,7 +31,7 @@
     margin-top: 13px;
     margin-left: 7px;
     margin-bottom: 24px;
-    margin-right: 10px;
+    margin-right: 17px;
   }
 
   &__input {
@@ -37,18 +41,7 @@
     margin-bottom: 14px;
     padding-left: 15px;
     border: solid 1px @pinkish-grey;
-  }
-
-  &__input--name {
-    width: 229px;
-  }
-
-  &__input--weight {
-    width: 204px;
-  }
-
-  &__input--age {
-    width: 172px;
+    flex-grow: 1;
   }
 }
 
@@ -62,21 +55,10 @@
     &__label {
       font-size: 20px;
       line-height: 1;
-      margin-top: 14px;
+      margin-top: 17px;
       margin-left: 30px;
       margin-bottom: 36px;
-    }
-
-    &__label--name {
-      margin-right: 12px;
-    }
-
-    &__label--weight {
-      margin-right: 15px;
-    }
-
-    &__label--age {
-      margin-right: 12px;
+      margin-right: 18px;
     }
 
     &__input {
@@ -84,22 +66,12 @@
       font-size: 20px;
       line-height: 1;
       padding-left: 19px;
-    }
-
-    &__input--name {
-      width: 567px;
-    }
-
-    &__input--weight {
-      width: 536px;
-    }
-
-    &__input--age {
-      width: 497px;
+      margin-bottom: 20px;
     }
 
     &__list {
       margin-bottom: 51px;
+      margin-right: 48px;
     }
   }
 }
@@ -117,16 +89,9 @@
       margin-left: 0;
     }
 
-    &__input--name {
-      width: 506px;
-    }
-
-    &__input--weight {
-      width: 475px;
-    }
-
-    &__input--age {
-      width: 436px;
+    &__list {
+      margin-right: 0;
+      margin-bottom: 45px;
     }
   }
 }
