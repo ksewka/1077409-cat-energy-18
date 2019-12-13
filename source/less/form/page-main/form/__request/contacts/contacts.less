@@ -35,6 +35,7 @@
   &__item {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
   }
 
   &__label {
@@ -47,42 +48,31 @@
     text-transform: uppercase;
     margin-right: 13px;
     margin-top: 13px;
-    position: relative;
   }
 
   &__input {
     .input-style();
     min-height: 45px;
-    opacity: 0.5;
-    border: solid 1px @pinkish-grey;
     margin-bottom: 14px;
     padding-left: 15px;
+    padding-right: 45px;
+    color: @greyish-brown;
     flex-grow: 1;
   }
 
-  &__label--email::after {
-    content: "";
+  &__icon {
     position: absolute;
-    top: 4px;
-    right: -217px;
-    width: 18px;
-    height: 14px;
-    background-image: url("../img/mail-svg.svg");
-    background-repeat: no-repeat;
-    background-size: 18px 14px;
+    top: 14px;
+    right: 16px;
   }
+}
 
-  &__label--phone::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -204px;
-    width: 21px;
-    height: 21px;
-    background-image: url("../img/phone-svg.svg");
-    background-repeat: no-repeat;
-    background-size: 21px 21px;
-  }
+.contacts__input:active ~ .contacts__icon path{
+  fill: @leaf;
+}
+
+.contacts__input:required ~ .contacts__icon path{
+  fill: @peachy-pink;
 }
 
 @media (min-width: @tablet-width) {
@@ -121,16 +111,6 @@
       line-height: 1;
       margin-right: 17px;
       margin-left: 23px;
-    }
-
-    &__label--email::after {
-      top: 11px;
-      left: 594px;
-    }
-
-    &__label--phone::after {
-      top: 7px;
-      left: 598px;
     }
 
     &__input {
@@ -184,16 +164,6 @@
 
     &__label {
       margin-left: 0;
-    }
-
-    &__label--email::after {
-      top: 7px;
-      left: 531px;
-    }
-
-    &__label--phone::after {
-      top: 4px;
-      left: 534px;
     }
   }
 }

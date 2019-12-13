@@ -37,6 +37,10 @@
     text-transform: uppercase;
   }
 
+  &__before {
+    margin-left: 4px;
+  }
+
   &__toggle {
     position: relative;
     width: 84px;
@@ -95,12 +99,16 @@
 @media (min-width: @tablet-width) {
   .slider {
     background-color: @grey-back;
-    margin-top: 255px;
+    margin-top: 252px;
 
     &__wrapper {
       width: 708px;
       margin: 0 auto;
       position: relative;
+    }
+
+    &__image {
+      margin-top: -170px;
     }
 
     &__item--before-tablet {
@@ -119,7 +127,7 @@
     }
 
     &__list {
-      margin-bottom: 385px;
+      margin-bottom: 57px;
     }
   }
 
@@ -127,7 +135,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: -40px;
-    margin-bottom: 70px;
+    margin-bottom: 38px;
     width: 569px;
 
     &__before,
@@ -135,6 +143,27 @@
       font-size: 20px;
       line-height: 1;
       border-bottom: 1px dotted @border;
+    }
+
+    &__before {
+      margin-left: 0;
+    }
+
+    &__toggle {
+      width: 425px;
+      height: 6px;
+      background-color: @white-six;
+      margin-top: 5px;
+    }
+
+    &__toggle::before,
+    &__toggle::after {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 13px solid @white;
+      top: -13px;
+      left: 197px;
     }
   }
 }

@@ -36,6 +36,10 @@
     text-transform: uppercase;
   }
 
+  &__label:active {
+    opacity: 0.3;
+  }
+
   &__checkbox {
     position: absolute;
     top: 0;
@@ -63,6 +67,11 @@
 input[type="checkbox"]:checked + .surplus__checkbox::before {
   display: block;
 }
+
+input[type="checkbox"]:hover ~ .surplus__checkbox {
+  border-color: @light-gray;
+}
+
 @media(min-width: @tablet-width) {
   .surplus {
     flex-direction: column;

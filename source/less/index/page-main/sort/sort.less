@@ -68,6 +68,10 @@
     text-transform: uppercase;
   }
 
+  &__go-to:active {
+    opacity: 0.3;
+  }
+
   &__go-to::after {
     content: "";
     position: absolute;
@@ -76,7 +80,7 @@
     background-image: url("../img/right-arrow.png");
     background-size: 25px 12px;
     background-repeat: no-repeat;
-    background-position: 11px 0;
+    background-position: 11px 2px;
   }
 
   &__item--slim {
@@ -114,6 +118,10 @@
       margin-left: 55px;
       margin-top: 73px;
       margin-bottom: 26px;
+    }
+
+    &__go-to::after {
+      background-position: 22px 2px;
     }
 
     &__description {

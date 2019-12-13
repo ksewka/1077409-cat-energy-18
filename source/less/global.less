@@ -21,7 +21,7 @@ a {
 .button {
   width: 280px;
   background-color: @leaf;
-  padding-top: 12px;
+  padding-top: 14px;
   padding-bottom: 11px;
   text-align: center;
   cursor: pointer;
@@ -32,8 +32,7 @@ a {
 }
 
 .button:active {
-  background-color: @grass;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .visually-hidden {
@@ -46,6 +45,27 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+  input[type="text"],
+  textarea {
+    border: 1px solid rgba(205,205,205,0.5);
+
+    &:hover {
+      border: 1px solid @pinkish-grey;
+    }
+
+    &:active {
+      border:2px solid @greyish-brown;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:required {
+      border: 2px solid @peachy-pink;
+    }
+  }
 
 input[type="text"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {

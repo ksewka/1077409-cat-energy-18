@@ -1,7 +1,7 @@
 .social {
-  margin-left: 80px;
+  margin-left: 78px;
   padding-top: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   border-top: 1px solid @border;
   border-bottom: 1px solid @border;
 
@@ -9,9 +9,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 122px;
+    width: 125px;
     .list-reset();
     list-style: none;
+  }
+
+  &__link:active > .social__icon path{
+    fill: @leaf;
+    opacity: 0.3;
+  }
+
+  &__link:hover > .social__icon path{
+    fill: @leaf;
   }
 
   &__icon--vk {
@@ -34,7 +43,8 @@
   .social {
     padding: 0;
     margin-left: 155px;
-    margin-right: 135px;
+    margin-right: 133px;
+    margin-top: -3px;
 
     &__list {
       width: 126px;

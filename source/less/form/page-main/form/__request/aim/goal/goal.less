@@ -12,6 +12,10 @@
     text-transform: uppercase;
   }
 
+  &__label:active {
+    opacity: 0.3;
+  }
+
   &__radio {
     width: 30px;
     height: 30px;
@@ -38,6 +42,10 @@
 
 input[type="radio"]:checked + .goal__radio::before {
   display: block;
+}
+
+input[type="radio"]:hover ~ .goal__radio {
+  border-color: @light-gray;
 }
 
 @media (min-width: @tablet-width) {
