@@ -19,7 +19,7 @@
     flex-direction: column;
     background-color: @grey-back;
     min-width: 280px;
-    height: 266px;
+    min-height: 266px;
     margin-bottom: 20px;
   }
 
@@ -57,6 +57,7 @@
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid @border;
     font-family: @oswald;
     font-size: 16px;
@@ -172,6 +173,7 @@
 
     &__list {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -210,11 +212,10 @@
 
     &__description {
       min-width: 462px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     &__go-to {
-      padding: 0;
     }
   }
 }

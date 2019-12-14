@@ -1,17 +1,34 @@
 .social {
   margin-left: 78px;
   padding-top: 20px;
-  padding-bottom: 18px;
+  padding-bottom: 6px;
   border-top: 1px solid @border;
   border-bottom: 1px solid @border;
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     width: 125px;
     .list-reset();
     list-style: none;
+  }
+
+  &__item:nth-child(1) {
+    margin-right: 36px;
+  }
+
+  &__item:nth-child(2) {
+    margin-right: 40px;
+  }
+
+  &__item {
+    margin-right: 38px;
+    margin-bottom: 10px;
+  }
+
+  &__item:nth-child(3n) {
+    margin-right: 0;
   }
 
   &__link:active > .social__icon path{
@@ -47,12 +64,19 @@
     margin-top: -3px;
 
     &__list {
-      width: 126px;
+      min-width: 126px;
+    }
+
+    &__item:nth-child(1) {
+      margin-right: 29px;
+    }
+
+    &__item:nth-child(2) {
+      margin-right: 28px;
     }
 
     &__item {
-      display: inline-block;
-      vertical-align: middle;
+      margin-right: 28px;
     }
 
     &__icon--vk {
@@ -69,5 +93,12 @@
       width: 14px;
       height: 28px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    margin-left: 155px;
+    margin-right: 105px;
   }
 }
