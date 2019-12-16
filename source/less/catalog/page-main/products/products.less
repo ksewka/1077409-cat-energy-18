@@ -1,11 +1,8 @@
 .products {
-<<<<<<< HEAD
   &__wrapper {
     width: 320px;
     margin: 0 auto;
   }
-=======
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
   &__title {
     font-family: @oswald;
     font-size: 36px;
@@ -13,16 +10,12 @@
     line-height: 1.67;
     text-align: left;
     color: @black-one;
-<<<<<<< HEAD
     margin-top: 20px;
     margin-left: 22px;
-=======
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
   }
 
   &__list {
     list-style: none;
-<<<<<<< HEAD
     padding: 0;
     margin: 0;
   }
@@ -50,8 +43,26 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
-=======
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products {
+    &__wrapper {
+      width: 1220px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      margin-top: 70px;
+    }
+
+    &__list {
+      justify-content: stretch;
+    }
   }
 }
