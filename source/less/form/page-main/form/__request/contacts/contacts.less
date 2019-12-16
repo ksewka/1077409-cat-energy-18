@@ -62,8 +62,15 @@
 
   &__icon {
     position: absolute;
-    top: 14px;
-    right: 16px;
+    &--email {
+      top: 16px;
+      right: 15px;
+    }
+
+    &--phone {
+      top: 13px;
+      right: 12px;
+    }
   }
 }
 
@@ -109,20 +116,39 @@
     &__label {
       font-size: 20px;
       line-height: 1;
-      margin-right: 17px;
       margin-left: 23px;
+
+      &--email {
+        margin-right: 20px;
+      }
+
+      &--phone {
+        margin-right: 14px;
+      }
     }
 
     &__input {
       min-height: 52px;
       padding-left: 20px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       font-size: 20px;
       line-height: 1;
     }
 
     &__list {
       margin-right: 34px;
+    }
+
+    &__icon {
+      &--email {
+        top: 19px;
+        right: 19px;
+      }
+
+      &--phone {
+        top: 16px;
+        right: 16px;
+      }
     }
   }
 }

@@ -21,7 +21,7 @@
 }
 
 .controls {
-  padding-bottom: 33px;
+  padding-bottom: 28px;
   width: 200px;
   display: flex;
   justify-content: space-between;
@@ -35,6 +35,18 @@
     text-align: left;
     color: @black-one;
     text-transform: uppercase;
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+    padding-bottom: 6px;
+  }
+
+  &__before:hover,
+  &__after:hover{
+    border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+  }
+
+  &__before:active,
+  &__after:active {
+    border: none;
   }
 
   &__before {
@@ -162,8 +174,21 @@
       height: 34px;
       border-radius: 50%;
       border: 13px solid @white;
+      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
       top: -13px;
       left: 197px;
+    }
+
+    &__toggle:hover::after,
+    &__toggle:hover::before {
+      box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__toggle:active::after,
+    &__toggle:active::before {
+      box-shadow:
+        0 0 0 2px @leaf,
+        0px 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
   }
 }
@@ -201,5 +226,6 @@
     width: 570px;
     margin-top: 35px;
     margin-right: 130px;
+    margin-bottom: 29px;
   }
 }
