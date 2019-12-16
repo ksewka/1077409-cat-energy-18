@@ -62,6 +62,7 @@
 
   &__icon {
     position: absolute;
+
     &--email {
       top: 16px;
       right: 15px;
@@ -74,11 +75,11 @@
   }
 }
 
-.contacts__input:active ~ .contacts__icon path{
+.contacts__input:active ~ .contacts__icon path {
   fill: @leaf;
 }
 
-.contacts__input:required ~ .contacts__icon path{
+.contacts__input:required ~ .contacts__icon path {
   fill: @peachy-pink;
 }
 
@@ -156,6 +157,7 @@
 @media (min-width: @desktop-width) {
   .contacts {
     margin-bottom: 36px;
+
     &__title {
       padding-top: 0;
       padding-left: 0;
