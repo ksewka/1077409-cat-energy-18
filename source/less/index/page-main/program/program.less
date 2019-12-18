@@ -4,13 +4,28 @@
   font-weight: 400;
 }
 
-
 .program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
+  margin-bottom: 24px;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__title {
+    padding: 0;
+    margin: 0;
+    margin-top: 29px;
+    margin-bottom: 25px;
     font-family: @oswald;
     font-size: 36px;
     text-align: center;
@@ -22,6 +37,17 @@
     font-size: 14px;
     text-transform: uppercase;
     .mixin;
+    text-align: center;
+  }
+
+  &__picture {
+    width: 280px;
+    height: 270px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 280px 270px;
   }
 
   &__pick-up {
@@ -29,8 +55,125 @@
     color: @white;
     font-size: 14px;
     font-weight: 400;
+    padding-top: 8px;
     display: block;
     text-transform: uppercase;
     line-height: 1.29;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    background-image: none;
+    margin-bottom: 0;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    &__title {
+      width: 530px;
+      font-size: 60px;
+      line-height: 1;
+      color: @black-one;
+      margin-left: 88px;
+      margin-top: 55px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    &__slogan {
+      font-family: @oswald;
+      font-size: 20px;
+      line-height: 1;
+      text-align: left;
+      color: @black-one;
+      margin-left: 90px;
+      position: relative;
+    }
+
+    &__picture {
+      width: 709px;
+      height: 1000px;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 709px 609px;
+      background-position: 0 225px;
+      order: 2;
+      z-index: 1;
+      position: absolute;
+    }
+
+    &__pick-up {
+      width: 245px;
+      min-height: 52px;
+      font-family: @oswald;
+      font-size: 20px;
+      line-height: 1;
+      color: @white;
+      margin-left: 87px;
+      margin-top: 50px;
+      margin-bottom: 540px;
+      padding-bottom: 20px;
+      padding-top: 14px;
+      order: 1;
+      z-index: 2;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    outline: 1px solid transparent;
+
+    &__wrapper {
+      display: block;
+      width: 1220px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    &__picture {
+      display: inline-block;
+      margin-top: 0;
+      width: 522px;
+      height: 750px;
+      background-image: url("../img/index-can-desktop.png");
+      background-size: 552px 499px;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -200px;
+      right: 250px;
+    }
+
+    &__title {
+      margin-left: 80px;
+      margin-top: 105px;
+    }
+
+    &__pick-up {
+      margin-top: 50px;
+      margin-left: 80px;
+      padding-top: 15px;
+      margin-bottom: 265px;
+    }
+
+    &__slogan {
+      margin-left: 80px;
+    }
+  }
+
+  .program::before {
+    content: "";
+    width: 720px;
+    height: 696px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    z-index: -9999;
   }
 }

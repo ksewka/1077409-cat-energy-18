@@ -1,5 +1,18 @@
 .features {
+  margin-bottom: 40px;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__tablet-br {
+    display: none;
+  }
+
   &__title {
+    padding: 0;
+    margin: 15px 0 0 20px;
     font-family: @oswald;
     font-size: 36px;
     font-weight: 400;
@@ -9,7 +22,15 @@
   }
 
   &__list {
+    .list-reset();
     list-style: none;
+    padding-top: 18px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    padding-left: 100px;
+    min-height: 60px;
   }
 
   &__description {
@@ -19,5 +40,198 @@
     line-height: 1.29;
     text-align: left;
     color: @greyish-brown;
+  }
+}
+
+.feature__item--healthy {
+  background-image: url("../img/advantage-1.png");
+  background-repeat: no-repeat;
+  background-position: 20px -5px;
+}
+
+.feature__item--form {
+  background-image: url("../img/andvantage-2.png");
+  background-repeat: no-repeat;
+  background-position: 20px -5px;
+}
+
+.feature__item--change {
+  background-image: url("../img/advantage-3.png");
+  background-repeat: no-repeat;
+  background-position: 20px -5px;
+}
+
+.feature__item--result {
+  background-image: url("../img/advantage-4.png");
+  background-repeat: no-repeat;
+  background-position: 20px -5px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+      border-bottom: 1px solid @border;
+    }
+
+    &__mobile-br {
+      display: none;
+    }
+
+    &__tablet-br {
+      display: block;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 1;
+      margin-left: 0;
+      margin-bottom: 55px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      min-height: 230px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      margin-bottom: 85px;
+    }
+
+    &__item:nth-child(2n+1) {
+      margin-right: 140px;
+    }
+
+    &__item:nth-child(3),
+    &__item:nth-child(4) {
+      margin-bottom: 56px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 1.5;
+      width: 245px;
+      margin-top: 110px;
+      z-index: 2;
+    }
+  }
+
+  .features__item::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -3px;
+    left: 0;
+  }
+
+  .features__item:nth-child(1)::after {
+    content: "1";
+    position: absolute;
+    width: 71px;
+    height: 228px;
+    font-family: @oswald;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 1;
+    color: @grey-back;
+    top: -41px;
+    right: 55px;
+    z-index: 1;
+  }
+
+  .features__item:nth-child(2)::after {
+    content: "2";
+    position: absolute;
+    width: 71px;
+    height: 228px;
+    font-family: @oswald;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 1;
+    color: @grey-back;
+    top: -41px;
+    right: 64px;
+    z-index: 1;
+  }
+
+  .features__item:nth-child(3)::after {
+    content: "3";
+    position: absolute;
+    width: 71px;
+    height: 228px;
+    font-family: @oswald;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 1;
+    color: @grey-back;
+    top: -41px;
+    right: 60px;
+    z-index: 1;
+  }
+
+  .features__item:nth-child(4)::after {
+    content: "4";
+    position: absolute;
+    width: 71px;
+    height: 228px;
+    font-family: @oswald;
+    font-size: 281px;
+    font-weight: 400;
+    line-height: 1;
+    color: @grey-back;
+    top: -41px;
+    right: 61px;
+    z-index: 1;
+  }
+
+  .feature__item--healthy {
+    background-image: url("../img/advantage-1-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .feature__item--form {
+    background-image: url("../img/andvantage-2-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .feature__item--change {
+    background-image: url("../img/advantage-3-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  .feature__item--result {
+    background-image: url("../img/advantage-4-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    margin-bottom: 0;
+
+    &__wrapper {
+      width: 1220px;
+      margin: 0 auto;
+      border: none;
+    }
+
+    &__item:nth-child(n) {
+      margin-right: 80px;
+    }
+
+    &__item:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }

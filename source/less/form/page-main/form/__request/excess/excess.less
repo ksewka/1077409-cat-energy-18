@@ -1,0 +1,156 @@
+.excess {
+  &--form {
+    border: none;
+    padding-left: 20px;
+  }
+
+  &__caption {
+    font-family: @oswald;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: left;
+    color: @black-one;
+    margin-top: 14px;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    list-style: none;
+    .list-reset();
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-bottom: 22px;
+  }
+
+  &__label {
+    font-family: @oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.13;
+    text-align: left;
+    color: @black-two;
+    position: relative;
+    padding-left: 46px;
+    text-transform: uppercase;
+  }
+
+  &__label:active {
+    opacity: 0.3;
+  }
+
+  &__checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: solid 1px @pinkish-grey;
+    background-color: @white;
+  }
+
+  &__checkbox::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 17px;
+    top: 4px;
+    left: 3px;
+    background-image: url("../img/tick-svg.png");
+    background-repeat: no-repeat;
+    background-size: 22px 17px;
+    display: none;
+  }
+}
+
+input[type="checkbox"]:checked + .excess__checkbox::before {
+  display: block;
+}
+
+input[type="checkbox"]:hover ~ .excess__checkbox {
+  border-color: @light-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .excess {
+    flex-direction: column;
+    padding: 0;
+
+    &__caption {
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 66px;
+      margin-top: 20px;
+      margin-left: 39px;
+    }
+
+    &__label {
+      font-size: 20px;
+      line-height: 1;
+      padding-left: 57px;
+      margin-left: 41px;
+    }
+
+    &__checkbox {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+    }
+
+    &__checkbox::before {
+      top: 12px;
+      left: 8px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 11px;
+    }
+
+    &__item {
+      width: 316px;
+      margin-bottom: 50px;
+    }
+
+    &__item:nth-child(2n+1) {
+      margin-right: 28px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .excess {
+    &__caption {
+      margin-left: 0;
+      margin-top: 23px;
+    }
+
+    &__list {
+      margin-bottom: 21px;
+    }
+
+    &__item {
+      width: 245px;
+      margin-right: 80px;
+    }
+
+    &__label {
+      margin-left: 0;
+    }
+
+    &__item:nth-child(2n+1) {
+      margin-right: 80px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+
+    &__checkbox {
+      top: 0;
+    }
+  }
+}

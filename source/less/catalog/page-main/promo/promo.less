@@ -1,10 +1,110 @@
 .promo {
+  margin-top: 39px;
+  margin-bottom: 32px;
+
+  &__wrapper {
+    position: relative;
+    width: 320px;
+    min-height: 290px;
+    margin: 0 auto;
+    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 280px 289px;
+    background-position: 20px 0;
+  }
+
+  &__wrapper::before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 132px;
+    width: 56px;
+    height: 61px;
+    background-image: url("../img/gift.png");
+    background-repeat: no-repeat;
+  }
+
   &__text {
+    position: absolute;
     font-family: "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
     text-align: center;
     color: @white;
+    display: block;
+    width: 165px;
+    top: 171px;
+    right: 78px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    margin-top: 66px;
+    margin-bottom: 74px;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+      min-height: 200px;
+      background-image: url("../img/gift-photo-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 708px 200px;
+      background-position: 0 0;
+    }
+
+    &__wrapper::before {
+      top: 65px;
+      left: 91px;
+    }
+
+    &__text {
+      top: 57px;
+      right: 120px;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    margin-top: 175px;
+
+    &__wrapper {
+      position: relative;
+      width: 245px;
+      min-height: 290px;
+      margin: 0 auto;
+      background-image: url("../img/gift-photo-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: 245px 289px;
+      background-position: 0 0;
+    }
+
+    &__wrapper::before {
+      content: "";
+      position: absolute;
+      top: 64px;
+      left: 96px;
+      width: 56px;
+      height: 61px;
+      background-image: url("../img/gift.png");
+      background-repeat: no-repeat;
+    }
+
+    &__text {
+      position: absolute;
+      font-family: "Arial", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25;
+      text-align: center;
+      color: @white;
+      display: block;
+      width: 165px;
+      top: 171px;
+      right: 40px;
+    }
   }
 }
