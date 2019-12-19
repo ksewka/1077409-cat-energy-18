@@ -2,7 +2,7 @@
   .list-reset();
   display: flex;
   flex-direction: column;
-  width: 320px;
+  min-width: 320px;
 
   &__item {
     min-height: 65px;
@@ -20,21 +20,21 @@
     text-transform: uppercase;
     padding-top: 22px;
   }
+}
 
-  &__link:hover {
+  a[href].list__link:hover {
     opacity: 0.6;
   }
 
-  &__link:active {
+  a[href].list__link:active {
     opacity: 0.3;
   }
-}
 
 @media (min-width: @tablet-width) {
   .list {
     display: flex;
     flex-direction: row;
-    margin-right: -11px;
+    margin: 0;
   }
 
   .list__item {
@@ -70,6 +70,7 @@
 @media (min-width: @desktop-width) {
   .list {
     min-width: 490px;
+    margin-left: 461px;
 
     &__link {
       font-family: @oswald;

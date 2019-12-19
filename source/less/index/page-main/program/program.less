@@ -13,6 +13,11 @@
   background-position: center top;
   margin-bottom: 24px;
 
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
   &__wrapper {
     width: 320px;
     margin: 0 auto;
@@ -40,16 +45,6 @@
     text-align: center;
   }
 
-  &__picture {
-    width: 280px;
-    height: 270px;
-    margin-top: 30px;
-    margin-bottom: 5px;
-    background-image: url("../img/index-can-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-size: 280px 270px;
-  }
-
   &__pick-up {
     font-family: @oswald;
     color: @white;
@@ -59,6 +54,10 @@
     display: block;
     text-transform: uppercase;
     line-height: 1.29;
+  }
+
+  &__picture {
+    margin-top: 30px;
   }
 }
 
@@ -94,18 +93,6 @@
       position: relative;
     }
 
-    &__picture {
-      width: 709px;
-      height: 1000px;
-      background-image: url("../img/index-can-tablet@1x.jpg");
-      background-repeat: no-repeat;
-      background-size: 709px 609px;
-      background-position: 0 225px;
-      order: 2;
-      z-index: 1;
-      position: absolute;
-    }
-
     &__pick-up {
       width: 245px;
       min-height: 52px;
@@ -114,12 +101,16 @@
       line-height: 1;
       color: @white;
       margin-left: 87px;
-      margin-top: 50px;
+      margin-top: -584px;
       margin-bottom: 540px;
       padding-bottom: 20px;
       padding-top: 14px;
       order: 1;
       z-index: 2;
+    }
+
+    &__picture {
+      margin-top: 20px;
     }
   }
 }
@@ -135,26 +126,13 @@
       position: relative;
     }
 
-    &__picture {
-      display: inline-block;
-      margin-top: 0;
-      width: 522px;
-      height: 750px;
-      background-image: url("../img/index-can-desktop.png");
-      background-size: 552px 499px;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: -200px;
-      right: 250px;
-    }
-
     &__title {
       margin-left: 80px;
       margin-top: 105px;
     }
 
     &__pick-up {
-      margin-top: 50px;
+      margin-top: -188px;
       margin-left: 80px;
       padding-top: 15px;
       margin-bottom: 265px;
@@ -162,6 +140,11 @@
 
     &__slogan {
       margin-left: 80px;
+    }
+
+    &__picture {
+      margin-top: -265px;
+      margin-left: 449px;
     }
   }
 
@@ -175,5 +158,10 @@
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     z-index: -9999;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-size: 720px auto;
+    }
   }
 }
