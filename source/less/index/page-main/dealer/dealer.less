@@ -1,20 +1,128 @@
 .dealer {
+  background-color: @grey-back;
+
+  &__wrapper {
+    width: 320px;
+    min-height: 114px;
+    padding-right: 19px;
+    padding-left: 19px;
+    padding-top: 30px;
+    padding-bottom: 28px;
+    background-color: @grey-back;
+    margin: 0 auto;
+    display: flex;
+  }
+
   &__title {
+    padding: 0;
+    margin: 0;
+    margin-right: 15px;
     font-family: @oswald;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
     text-align: left;
+    display: block;
+    width: 300px;
     color: @black-one;
     text-transform: uppercase;
   }
 
   &__address {
+    padding: 0;
+    margin: 0;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.43;
     text-align: left;
     color: @greyish-brown;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .dealer {
+    &__wrapper {
+      width: 708px;
+      min-height: 201px;
+      margin: 0 auto;
+      padding-top: 66px;
+    }
+
+    &__title {
+      margin-left: 22px;
+      margin-right: 283px;
+      font-size: 20px;
+      line-height: 1.25;
+      text-align: left;
+    }
+
+    &__city {
+      display: block;
+      margin-top: 20px;
+    }
+
+    &__address {
+      margin-right: 23px;
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .dealer {
+    margin: 0 auto;
+    width: 1440px;
+    position: relative;
+
+    &__wrapper {
+      position: absolute;
+      top: 104px;
+      left: 110px;
+      padding-top: 67px;
+      padding-left: 76px;
+      padding-right: 90px;
+      width: 570px;
+      min-height: 200px;
+      background-color: @white;
+    }
+
+    &__title {
+      padding: 0;
+      margin: 0;
+      margin-right: 64px;
+    }
+
+    &__address {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    &__city {
+      margin-top: 20px;
+    }
+  }
+}
+
+.main-page .dealer {
+  background-color: @white;
+
+  &__wrapper {
+    background-color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-page .dealer {
+    background-color: @white;
+
+    &__wrapper {
+      background-color: @white;
+    }
   }
 }

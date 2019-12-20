@@ -1,10 +1,11 @@
 .product {
-<<<<<<< HEAD
   padding-left: 20px;
   padding-right: 20px;
   border-top: 1px solid @border;
-=======
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: 1px solid @border;
+
   &__title {
     font-family: @oswald;
     font-size: 16px;
@@ -12,34 +13,62 @@
     line-height: 1.25;
     text-align: left;
     color: @black-one;
-<<<<<<< HEAD
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    margin-top: 25px;
+    margin-top: 22px;
     margin-bottom: 10px;
     width: 75px;
-=======
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
+  }
+
+  &__title--show {
+    position: relative;
+    width: 205px;
+    margin-top: 80px;
+    margin-left: 39px;
+    margin-bottom: 8px;
+  }
+
+  &__title--show::before {
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 31px;
+    top: -55px;
+    left: 87px;
+    background-image: url("../img/plus-mobile-svg.svg");
+    opacity: 0.2;
   }
 
   &__order {
     display: block;
+    min-height: 40px;
     color: #ffffff;
     font-family: @oswald;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
     text-align: center;
-<<<<<<< HEAD
     text-transform: uppercase;
     order: 3;
-    margin-bottom: 21px;
+    margin-bottom: 23px;
+    padding-top: 10px;
     align-self: flex-start;
-=======
-    color: @white;
-    text-transform: uppercase;
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
+  }
+
+  &__order--show {
+    background-color: @grey-back;
+    color: @greyish-brown;
+    margin-bottom: 22px;
+    align-self: flex-start;
+  }
+
+  &__order--show:hover {
+    background-color: @white-three;
+  }
+
+  &__order--show:active {
+    color: rgba(68, 68, 68, 0.3);
   }
 
   &__field,
@@ -51,10 +80,11 @@
     text-align: left;
     color: @greyish-brown;
   }
-<<<<<<< HEAD
 
   &__image {
+    object-fit: none;
     order: 1;
+    display: block;
   }
 
   &__text {
@@ -70,13 +100,146 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__phrase {
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33;
+    text-align: left;
+    color: @greyish-brown;
+    margin-top: 0;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    width: 222px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .product {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: @grey-back;
+    width: 324px;
+    margin-top: 125px;
+    margin-bottom: 17px;
+    padding-left: 36px;
+    padding-right: 37px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 1;
+      width: 130px;
+      display: block;
+      text-align: center;
+      margin-top: 38px;
+      margin-left: 62px;
+      margin-bottom: 23px;
+    }
+
+    &__title--show {
+      margin-top: 164px;
+      margin-left: 60px;
+      margin-bottom: 25px;
+      width: 135px;
+    }
+
+    &__title--show::before {
+      top: -110px;
+      left: 36px;
+      width: 61px;
+      height: 61px;
+      background-image: url("../img/plus-svg.svg");
+      opacity: 0.2;
+    }
+
+    &__phrase {
+      font-size: 16px;
+      line-height: 1.25;
+      text-align: center;
+      width: 170px;
+      margin-left: 42px;
+      margin-bottom: 83px;
+    }
+
+    &__field {
+      font-size: 16px;
+      line-height: 1;
+      text-align: left;
+    }
+
+    &__value {
+      font-size: 16px;
+      line-height: 1;
+      text-align: right;
+    }
+
+    &__description {
+      margin-bottom: 22px;
+      width: 100%;
+    }
+
+    &__image--small {
+      margin-top: -48px;
+      margin-left: -35px;
+      margin-right: -40px;
+    }
+
+    &__image--big {
+      margin-top: -82px;
+      margin-left: -35px;
+      margin-right: -40px;
+    }
+
+    &__order {
+      width: 100%;
+      margin-bottom: 38px;
+    }
+
+    &__row {
+      border-bottom: 1px solid @pinkish-grey;
+      margin-bottom: 6px;
+      padding-bottom: 7px;
+    }
   }
-=======
->>>>>>> b2215bbb621ef2b87a179ded510f4368e37e4a6f
+
+  .product--show {
+    background-color: @white;
+    border: 1px solid @border;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    width: 245px;
+    min-height: 431px;
+    padding-left: 38px;
+    padding-right: 38px;
+    margin-bottom: 16px;
+    margin-right: 80px;
+
+    &__title {
+      margin-left: 20px;
+    }
+
+    &__title--show {
+      margin-top: 165px;
+      margin-left: 15px;
+      margin-bottom: 23px;
+    }
+
+    &__phrase {
+      margin-left: 0;
+    }
+
+    &__row {
+      border-bottom: 1px solid @pinkish-grey;
+    }
+  }
+
+  .product:nth-child(4n) {
+    margin-right: 0;
+  }
 }

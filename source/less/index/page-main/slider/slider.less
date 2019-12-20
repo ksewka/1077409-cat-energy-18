@@ -1,18 +1,231 @@
 .slider {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 0;
+    background-color: @grey-back;
+  }
+
   &__list {
+    .list-reset();
     list-style: none;
+    margin-bottom: 32px;
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+}
+
+.controls {
+  padding-bottom: 28px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  &__before,
+  &__after {
+    font-family: @oswald;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: left;
+    color: @black-one;
+    text-transform: uppercase;
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+    padding-bottom: 6px;
+  }
+
+  &__before:hover,
+  &__after:hover {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+  }
+
+  &__before:active,
+  &__after:active {
+    border: none;
+  }
+
+  &__before {
+    margin-left: 4px;
+  }
+
+  &__toggle {
+    position: relative;
+    width: 84px;
+    height: 14px;
+    border: 1px solid @pinkish-grey;
+    border-radius: 6px;
+    background-color: @white;
+  }
+
+  &__toggle::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: @leaf;
+  }
+
+  &__toggle::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: @leaf;
+  }
+
+  &__toggle::before,
+  &__toggle::after {
+    display: none;
+  }
+}
+
+#cat-before:checked ~ .controls .controls__toggle::before,
+#cat-after:checked ~ .controls .controls__toggle::after {
+  display: block;
+}
+
+.wrapper {
+  background-color: @grey-back;
+}
+
+.slider__item {
+  display: none;
+}
+
+#cat-before:checked ~ .slider__list .slider__item--before,
+#cat-after:checked ~ .slider__list .slider__item--after {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    background-color: @grey-back;
+    margin-top: 252px;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    &__image {
+      margin-top: -170px;
+    }
+
+    &__item--before-tablet {
+      position: absolute;
+      top: -170px;
+      left: 20px;
+      display: block;
+    }
+
+    &__item--before-desktop {
+      display: none;
+    }
+
+    &__item--before {
+      display: none;
+    }
+
+    &__list {
+      margin-bottom: 57px;
+    }
   }
 
   .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -40px;
+    margin-bottom: 38px;
+    width: 569px;
+
     &__before,
     &__after {
-      font-family: @oswald;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.25;
-      text-align: left;
-      color: @black-one;
-      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 1;
+      border-bottom: 1px dotted @border;
     }
+
+    &__before {
+      margin-left: 0;
+    }
+
+    &__toggle {
+      width: 425px;
+      height: 6px;
+      background-color: @white-six;
+      margin-top: 5px;
+    }
+
+    &__toggle::before,
+    &__toggle::after {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 13px solid @white;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+      top: -13px;
+      left: 197px;
+    }
+
+    &__toggle:hover::after,
+    &__toggle:hover::before {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__toggle:active::after,
+    &__toggle:active::before {
+      box-shadow:
+        0 0 0 2px @leaf,
+        0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+
+    &__wrapper {
+      background-color: transparent;
+    }
+
+    &__image {
+      margin-top: 19px;
+    }
+
+    &__item--before-tablet {
+      display: none;
+    }
+
+    &__item--before-desktop {
+      display: block;
+    }
+
+    &__list {
+      margin-top: -80px;
+      margin-left: -170px;
+      margin-bottom: 0;
+    }
+  }
+
+  .controls {
+    width: 570px;
+    margin-top: 35px;
+    margin-right: 130px;
+    margin-bottom: 29px;
   }
 }

@@ -1,5 +1,23 @@
 .example {
+  background-color: @grey-back;
+
+  &__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tablet-br {
+    display: none;
+  }
+
   &__title {
+    padding: 0;
+    margin: 0;
+    margin-left: 18px;
+    margin-top: 15px;
+    margin-bottom: 23px;
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 36px;
     font-weight: 400;
@@ -9,11 +27,99 @@
   }
 
   &__text {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    width: 266px;
+    margin-left: 20px;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.29;
     text-align: left;
     color: @greyish-brown;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    margin-bottom: 0;
+    background-color: @white;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    &__tablet-br {
+      display: block;
+    }
+
+    &__mobile-br {
+      display: none;
+    }
+
+    &__title {
+      font-size: 60px;
+      padding: 0;
+      margin: 0;
+      margin-top: -15px;
+      margin-bottom: 42px;
+    }
+
+    &__text {
+      margin-bottom: 50px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    position: relative;
+
+    &__wrapper--all {
+      width: 1220px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    &__wrapper {
+      margin: 0;
+      margin-right: 180px;
+    }
+
+    &__title {
+      margin-top: -25px;
+      margin-left: 0;
+      margin-bottom: 124px;
+    }
+
+    &__text {
+      margin-left: 0;
+      margin-bottom: 71px;
+      margin-right: 30px;
+      width: 435px;
+      color: @greyish-brown;
+      z-index: 1;
+    }
+
+    &__tablet-br {
+      display: none;
+    }
+  }
+
+  .example::before {
+    content: "";
+    width: 100%;
+    min-height: 462px;
+    background-color: @grey;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    z-index: 0;
   }
 }
