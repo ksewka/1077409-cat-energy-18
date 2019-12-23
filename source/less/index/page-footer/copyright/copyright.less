@@ -14,6 +14,19 @@
     text-decoration: none;
   }
 
+  &__link:active {
+    opacity: 0.3;
+  }
+
+  &__link:hover .copyright__icon {
+    fill: @leaf;
+  }
+
+  &__link:active .copyright__icon {
+    fill: @leaf;
+    opacity: 0.3;
+  }
+
   &__span {
     margin-right: 142px;
     margin-top: 8px;
@@ -21,6 +34,7 @@
 
   &__icon {
     margin-top: 0;
+    fill: @brownish-grey;
   }
 }
 
