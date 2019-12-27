@@ -95,6 +95,13 @@
   display: block;
 }
 
+#cat-before:focus ~ .controls .controls__before,
+#cat-after:focus ~ .controls .controls__after {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .wrapper {
   background-color: @grey-back;
 }

@@ -47,28 +47,7 @@ a {
   overflow: hidden;
 }
 
-input[type="text"],
-textarea {
-  border: 1px solid rgba(205, 205, 205, 0.5);
-
-  &:hover {
-    border: 1px solid @pinkish-grey;
-  }
-
-  &:active {
-    border: 2px solid @greyish-brown;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:required {
-    border: 2px solid @peachy-pink;
-  }
-}
-
-input[type="text"]::-webkit-input-placeholder,
+input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: @greyish-brown;
   font-family: @oswald;
@@ -79,13 +58,13 @@ textarea::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
-input[type="text"]:focus::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
 @media (min-width: @tablet-width) {
-  input[type="text"]::-webkit-input-placeholder,
+  input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     font-size: 20px;
     line-height: 1;
