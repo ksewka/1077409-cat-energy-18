@@ -41,6 +41,24 @@
     padding-left: 15px;
     color: @greyish-brown;
     flex-grow: 1;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+  }
+
+  &__input:hover {
+    border: 1px solid @pinkish-grey;
+  }
+
+  &__input:active,
+  &__input:focus {
+    border: 2px solid @greyish-brown;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__input:invalid {
+    border: 2px solid @input-error;
   }
 }
 

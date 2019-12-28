@@ -73,6 +73,12 @@ input[type="checkbox"]:hover ~ .excess__checkbox {
   border-color: @light-gray;
 }
 
+input[type="checkbox"]:focus ~ .excess__checkbox {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 @media (min-width: @tablet-width) {
   .excess {
     flex-direction: column;
