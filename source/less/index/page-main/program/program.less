@@ -5,6 +5,7 @@
 }
 
 .program {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +17,15 @@
   @media (min-resolution: @retina-dppx) {
     background-image: url("../img/index-background-mobile@2x.jpg");
     background-size: 320px auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 305px;
+    background-color: @leaf;
+    z-index: -1;
   }
 
   &__wrapper {
@@ -65,6 +75,10 @@
   .program {
     background-image: none;
     margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
 
     &__wrapper {
       width: 708px;
@@ -148,12 +162,12 @@
     }
   }
 
-  .program::before {
+  .program::after {
     content: "";
     width: 720px;
     height: 696px;
     position: absolute;
-    top: 0;
+    top: -117px;
     left: 50%;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;

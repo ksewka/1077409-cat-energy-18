@@ -20,7 +20,7 @@ var uglify = require('gulp-uglify');
 
 //CSS-минификация,расставление префиксов
 
-gulp.task("css", function () {
+gulp.task("css", function() {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -37,11 +37,15 @@ gulp.task("css", function () {
 
 //Оптимизация изображений
 
-gulp.task("images", function(){
+gulp.task("images", function() {
   return gulp.src("source/img/**/*.{png, jpg, svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.jpegtran({
+        progressive: true
+      }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("source/img"));
@@ -49,15 +53,17 @@ gulp.task("images", function(){
 
 //Создание webp-формата
 
-gulp.task("webp", function(){
+gulp.task("webp", function() {
   return gulp.src("source/img/**/*.{png, jpg}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({
+      quality: 90
+    }))
     .pipe(gulp.dest("source/img"));
 });
 
 //Создание спрайта
 
-gulp.task("sprite", function(){
+gulp.task("sprite", function() {
   return gulp.src("source/img/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
@@ -68,27 +74,29 @@ gulp.task("sprite", function(){
 
 //HTML-добавление вирт.тега и минификация
 
-gulp.task("html", function(){
+gulp.task("html", function() {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(htmlmin ({collapseWhitespace: true}))
-  .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest("build"));
 });
 
 //Копирование файлов в продакшн
 
-gulp.task("copy", function(){
+gulp.task("copy", function() {
   return gulp.src([
-    "source/fonts/**/*.{woff, woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"));
+      "source/fonts/**/*.{woff, woff2}",
+      "source/img/**",
+      "source/js/**",
+      "source/*.ico"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
 });
 
 //Удаление папки build
@@ -99,22 +107,22 @@ gulp.task("clean", function() {
 
 //Автоматическая перезагрузка страницы
 
-gulp.task("refresh", function(done){
+gulp.task("refresh", function(done) {
   server.reload();
   done();
 });
 
 //Минификация js
 
-gulp.task('jsmin', function () {
+gulp.task('jsmin', function() {
   return gulp.src('source/js/**/*.js')
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(rename("script.min.js"))
-        .pipe(gulp.dest('build/js'))
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest('build/js'))
 });
 
-gulp.task("server", function () {
+gulp.task("server", function() {
   server.init({
     server: "build/",
     notify: false,

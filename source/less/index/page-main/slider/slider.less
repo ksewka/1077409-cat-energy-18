@@ -25,6 +25,7 @@
   width: 200px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   &__before,
   &__after {
@@ -53,40 +54,24 @@
     margin-left: 4px;
   }
 
-  &__toggle {
-    position: relative;
+  &__scale {
     width: 84px;
     height: 14px;
     border: 1px solid @pinkish-grey;
     border-radius: 6px;
     background-color: @white;
+    margin-top: 3px;
   }
 
-  &__toggle::before {
-    content: "";
+  &__toggle {
     position: absolute;
-    top: 3px;
-    left: 6px;
+    top: 6px;
+    left: 64px;
     width: 35px;
     height: 6px;
     border-radius: 3px;
     background-color: @leaf;
-  }
-
-  &__toggle::after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: 6px;
-    width: 35px;
-    height: 6px;
-    border-radius: 3px;
-    background-color: @leaf;
-  }
-
-  &__toggle::before,
-  &__toggle::after {
-    display: none;
+    cursor: pointer;
   }
 }
 
@@ -168,36 +153,38 @@
       margin-left: 0;
     }
 
-    &__toggle {
+    &__scale {
       width: 425px;
       height: 6px;
       background-color: @white-six;
       margin-top: 5px;
     }
 
-    &__toggle::before,
-    &__toggle::after {
+    &__toggle {
       width: 34px;
       height: 34px;
       border-radius: 50%;
       border: 13px solid @white;
+      background-color: @leaf;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-      top: -13px;
-      left: 197px;
+      top: -7px;
+      left: 266px;
+      padding: 0;
     }
 
-    &__toggle:hover::after,
-    &__toggle:hover::before {
+      &__toggle::before {
+        display: none;
+      }
+
+    &__toggle:hover{
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
-    &__toggle:active::after,
-    &__toggle:active::before {
+    &__toggle:active {
       box-shadow:
         0 0 0 2px @leaf,
         0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -235,4 +222,5 @@
     margin-right: 130px;
     margin-bottom: 29px;
   }
+ }
 }
