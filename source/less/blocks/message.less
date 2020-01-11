@@ -37,6 +37,20 @@
   }
 }
 
+textarea::-webkit-input-placeholder {
+  color: @greyish-brown;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.13;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 @media (min-width: @tablet-width) {
   .message {
     margin-bottom: 63px;
@@ -74,6 +88,11 @@
       font-size: 20px;
       line-height: 1;
     }
+  }
+
+  textarea::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 1;
   }
 }
 

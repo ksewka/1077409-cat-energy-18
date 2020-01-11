@@ -65,17 +65,20 @@
     border: 1px solid @pinkish-grey;
   }
 
-  &__input:active,
-  &__input:focus {
+  &__input:active {
     border: 2px solid @greyish-brown;
-  }
-
-  &__input:invalid {
-    border: 2px solid @input-error;
   }
 
   &__input:focus {
     outline: none;
+  }
+
+  &__input:required:focus {
+    border: 2px solid @input-error;
+  }
+
+  &__input:placeholder-shown {
+    border: 1px solid rgba(205, 205, 205, 0.5);
   }
 
   &__icon {
@@ -93,11 +96,33 @@
   }
 }
 
+input::-webkit-input-placeholder {
+  color: @greyish-brown;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.13;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 .contacts__input:active ~ .contacts__icon {
   fill: @leaf;
 }
 
 .contacts__input:invalid ~ .contacts__icon {
+  fill: @input-error;
+}
+
+.contacts__input:placeholder-shown ~ .contacts__icon {
+  fill: @black-one;
+}
+
+.contacts__input:focus ~ .contacts__icon {
   fill: @input-error;
 }
 
@@ -169,6 +194,11 @@
         right: 16px;
       }
     }
+  }
+
+  input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 1;
   }
 }
 
