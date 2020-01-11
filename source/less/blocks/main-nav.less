@@ -1,5 +1,22 @@
 .main-nav {
   position: relative;
+
+  &__toggle {
+    position: absolute;
+    top: -53px;
+    right: 10px;
+    z-index: 2;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-color: @white;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -35,17 +52,17 @@
     display: none;
   }
 
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
   .main-nav--opened .list-item {
     display: block;
   }
-}
 
-.main-nav--nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav--nojs .list-item {
-  display: block;
+  .main-nav--nojs .list-item {
+    display: block;
+  }
 }
 
 @media (min-width: @tablet-width) {
