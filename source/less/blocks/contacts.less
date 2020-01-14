@@ -19,7 +19,7 @@
     content: "";
     position: absolute;
     top: 43px;
-    left: 219px;
+    left: 0;
     width: 99px;
     height: 3px;
     background-color: @leaf;
@@ -101,12 +101,26 @@ input::-webkit-input-placeholder {
   font-family: @oswald;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.13;
+  line-height: 45px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+input::-moz-placeholder {
+  color: @greyish-brown;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
   text-align: left;
   text-transform: uppercase;
 }
 
 input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholde {
   color: transparent;
 }
 
@@ -141,7 +155,7 @@ input:focus::-webkit-input-placeholder {
       content: "";
       position: absolute;
       top: 52px;
-      left: -32px;
+      left: 0;
       width: 30px;
       height: 3px;
       background-color: @leaf;
@@ -176,7 +190,7 @@ input:focus::-webkit-input-placeholder {
       padding-left: 20px;
       margin-bottom: 20px;
       font-size: 20px;
-      line-height: 1;
+      line-height: 45px;
     }
 
     &__list {
@@ -198,7 +212,12 @@ input:focus::-webkit-input-placeholder {
 
   input::-webkit-input-placeholder {
     font-size: 20px;
-    line-height: 1;
+    line-height: 52px;
+  }
+
+  input::-moz-placeholder {
+    font-size: 20px;
+    line-height: 52px;
   }
 }
 
@@ -214,13 +233,13 @@ input:focus::-webkit-input-placeholder {
     &__title::before {
       width: 70px;
       top: 20px;
-      left: -112px;
+      left: 0;
     }
 
     &__title::after {
       width: 778px;
       top: 20px;
-      left: 550px;
+      left: 0;
     }
 
     &__list {

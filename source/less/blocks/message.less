@@ -20,7 +20,7 @@
     content: "";
     position: absolute;
     top: 28px;
-    left: 160px;
+    left: 0;
     width: 158px;
     height: 3px;
     background-color: @leaf;
@@ -51,7 +51,21 @@ textarea::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
+textarea::-moz-placeholder {
+  color: @greyish-brown;
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.13;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+textarea:focus::-moz-placeholder {
   color: transparent;
 }
 
@@ -70,7 +84,7 @@ textarea:focus::-webkit-input-placeholder {
       content: "";
       position: absolute;
       top: 37px;
-      left: -32px;
+      left: 0;
       width: 30px;
       height: 3px;
       background-color: @leaf;
@@ -79,7 +93,7 @@ textarea:focus::-webkit-input-placeholder {
     &__title::after {
       width: 480px;
       top: 37px;
-      left: 256px;
+      left: 0;
     }
 
     &__textarea {
@@ -98,6 +112,11 @@ textarea:focus::-webkit-input-placeholder {
     font-size: 20px;
     line-height: 1;
   }
+
+  textarea::-moz-placeholder {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -110,13 +129,13 @@ textarea:focus::-webkit-input-placeholder {
     &__title::before {
       width: 70px;
       top: 31px;
-      left: -111px;
+      left: 0;
     }
 
     &__title::after {
       width: 1113px;
       top: 31px;
-      left: 211px;
+      left: 0;
     }
 
     &__textarea {
