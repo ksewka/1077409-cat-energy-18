@@ -1,6 +1,7 @@
 .page-footer {
-  margin-top: -5px;
+  margin-top: 0;
   padding-top: 0;
+  min-height: 236px;
   background-color: @grey-back;
 
   &__wrapper {
@@ -17,7 +18,7 @@
     margin: 0;
     text-align: center;
     margin-bottom: 29px;
-    margin-top: 39px;
+    margin-top: 33px;
   }
 }
 
@@ -31,7 +32,8 @@ a[href].page-footer__logo-title:active {
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    padding-top: 64px;
+    padding-top: 60px;
+    min-height: 150px;
 
     &__wrapper {
       padding: 0;
@@ -49,8 +51,7 @@ a[href].page-footer__logo-title:active {
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    padding-top: 68px;
-    min-height: 150px;
+    padding-top: 63px;
 
     &__wrapper {
       width: 1220px;

@@ -144,12 +144,12 @@
           <div class="example__result result">
             <ul class="result__block">
               <li class="result__item">
-                <p class="result__value">5 кг</p>
-                <p class="result__title">Снижение веса</p>
+                <p class="result__value result__value--weight">5 кг</p>
+                <p class="result__title result__title--weight">Снижение веса</p>
               </li>
               <li class="result__item">
-                <p class="result__value">60 дней</p>
-                <p class="result__title">Затрачено времени</p>
+                <p class="result__value result__value--time">60 дней</p>
+                <p class="result__title result__title--time">Затрачено времени</p>
               </li>
             </ul>
             <p class="result__price">Затраты на питание: <span class="result__sum">15 000 руб.</span></p>
@@ -213,17 +213,19 @@
     <section class="page-main__address address">
       <div class="address__wrapper">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+        <div class="address__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="address__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-        </picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+            <img class="address__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </picture>
+        </div>
       </div>
-      <iframe class="address__map" src="https://yandex.ru/map-widget/v1/-/CKAizMKI" width="100%" height="400"></iframe>
+      <iframe class="address__map" src="https://yandex.ru/map-widget/v1/-/CKAizMKI" width="100%" height="365"></iframe>
     </section>
   </main>
 

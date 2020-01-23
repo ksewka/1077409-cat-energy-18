@@ -11,16 +11,18 @@
     line-height: 1;
     text-align: left;
     color: @black-one;
-    padding-top: 14px;
+    padding-top: 0;
     padding-left: 17px;
-    padding-bottom: 35px;
+    padding-bottom: 0;
+    margin-bottom: 36px;
+    margin-top: 13px;
   }
 
   &__title::after {
     content: "";
     position: absolute;
-    top: 28px;
-    left: 0;
+    top: 15px;
+    left: 160px;
     width: 158px;
     height: 3px;
     background-color: @leaf;
@@ -41,7 +43,7 @@
   }
 }
 
-textarea::-webkit-input-placeholder {
+.message__textarea::-webkit-input-placeholder {
   color: @greyish-brown;
   font-family: @oswald;
   font-size: 16px;
@@ -51,7 +53,7 @@ textarea::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
-textarea::-moz-placeholder {
+.message__textarea::-moz-placeholder {
   color: @greyish-brown;
   font-family: @oswald;
   font-size: 16px;
@@ -61,11 +63,11 @@ textarea::-moz-placeholder {
   text-transform: uppercase;
 }
 
-textarea:focus::-webkit-input-placeholder {
+.message__textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-textarea:focus::-moz-placeholder {
+.message__textarea:focus::-moz-placeholder {
   color: transparent;
 }
 
@@ -77,14 +79,14 @@ textarea:focus::-moz-placeholder {
       font-size: 36px;
       line-height: 1;
       padding-left: 37px;
-      margin-bottom: 42px;
+      margin-bottom: 79px;
     }
 
     &__title::before {
       content: "";
       position: absolute;
-      top: 37px;
-      left: 0;
+      top: 25px;
+      left: -32px;
       width: 30px;
       height: 3px;
       background-color: @leaf;
@@ -92,8 +94,8 @@ textarea:focus::-moz-placeholder {
 
     &__title::after {
       width: 480px;
-      top: 37px;
-      left: 0;
+      top: 25px;
+      left: 257px;
     }
 
     &__textarea {
@@ -108,12 +110,12 @@ textarea:focus::-moz-placeholder {
     }
   }
 
-  textarea::-webkit-input-placeholder {
+  .message__textarea::-webkit-input-placeholder {
     font-size: 20px;
     line-height: 1;
   }
 
-  textarea::-moz-placeholder {
+  .message__textarea::-moz-placeholder {
     font-size: 20px;
     line-height: 1;
   }
@@ -122,20 +124,20 @@ textarea:focus::-moz-placeholder {
 @media (min-width: @desktop-width) {
   .message {
     &__title {
-      padding-top: 9px;
-      padding-left: 0;
+      padding: 0;
+      margin-bottom: 74px;
     }
 
     &__title::before {
       width: 70px;
-      top: 31px;
-      left: 0;
+      top: 20px;
+      left: -112px;
     }
 
     &__title::after {
       width: 1113px;
-      top: 31px;
-      left: 0;
+      top: 20px;
+      left: 216px;
     }
 
     &__textarea {

@@ -53,8 +53,7 @@
   }
 
   &__input:focus {
-    border-color: #a6c7ff;
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 2px auto #a6c7ff;
   }
 
   &__input:required:focus {
@@ -66,7 +65,7 @@
   }
 }
 
-input::-webkit-input-placeholder {
+.info__input::-webkit-input-placeholder {
   color: @greyish-brown;
   font-family: @oswald;
   font-size: 16px;
@@ -76,22 +75,40 @@ input::-webkit-input-placeholder {
   text-transform: uppercase;
 }
 
-input::-moz-placeholder {
+.info__input::-moz-placeholder {
   color: @greyish-brown;
   font-family: @oswald;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.13;
+  line-height: 45px;
   text-align: left;
   text-transform: uppercase;
 }
 
-input:focus::-webkit-input-placeholder {
+.info__input:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-input:focus::-moz-placeholder {
+.info__input:focus::-moz-placeholder {
   color: transparent;
+}
+
+//Убирает стрелочки у инпутов
+
+.info__input[type="number"]::-webkit-outer-spin-button,
+.info__input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+//Убирает стрелочки у инпутов в Firefox
+.info__input[type="number"] {
+  appearance: textfield;
+}
+
+.info__input[type="number"]:hover,
+.info__input[type="number"]:focus {
+  appearance: textfield;
 }
 
 @media (min-width: @tablet-width) {
@@ -124,14 +141,14 @@ input:focus::-moz-placeholder {
     }
   }
 
-  input::-webkit-input-placeholder {
+  .info__input::-webkit-input-placeholder {
     font-size: 20px;
-    line-height: 1;
+    line-height: 52px;// в высоту инпута
   }
 
-  input::-moz-placeholder {
+  .info__input::-moz-placeholder {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 52px;
   }
 }
 

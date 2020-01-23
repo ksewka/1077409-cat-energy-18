@@ -4,13 +4,16 @@
 
   &__wrapper {
     position: relative;
-    width: 320px;
+    width: 280px;
     min-height: 290px;
     margin: 0 auto;
+    padding-top: 171px;
+    padding-left: 56px;
     background-image: url("../img/gift-photo-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: 280px 289px;
-    background-position: 20px 0;
+    background-position: 0 0;
+    background-color: @leaf;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -22,7 +25,7 @@
     content: "";
     position: absolute;
     top: 64px;
-    left: 132px;
+    left: 112px;
     width: 56px;
     height: 61px;
     background-image: url("../img/gift-svg.svg");
@@ -30,7 +33,6 @@
   }
 
   &__text {
-    position: absolute;
     font-family: "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -39,19 +41,21 @@
     color: @white;
     display: block;
     width: 165px;
-    top: 171px;
-    right: 78px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     margin-top: 70px;
-    margin-bottom: 85px;
+    margin-bottom: 75px;
 
     &__wrapper {
       width: 708px;
       margin: 0 auto;
+      padding-top: 56px;
+      padding-right: 120px;
+      padding-left: 424px;
+      padding-bottom: 52px;
       min-height: 200px;
       background-image: url("../img/gift-photo-tablet@1x.jpg");
       background-repeat: no-repeat;
@@ -70,8 +74,6 @@
     }
 
     &__text {
-      top: 57px;
-      right: 120px;
       text-align: left;
     }
   }
@@ -80,12 +82,16 @@
 @media (min-width: @desktop-width) {
   .promo {
     margin-top: 175px;
+    margin-bottom: 85px;
 
     &__wrapper {
       position: relative;
       width: 245px;
       min-height: 290px;
       margin: 0 auto;
+      padding-top: 172px;
+      padding-left: 40px;
+      padding-bottom: 26px;
       background-image: url("../img/gift-photo-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-size: 245px 289px;
@@ -109,7 +115,6 @@
     }
 
     &__text {
-      position: absolute;
       font-family: "Arial", sans-serif;
       font-size: 16px;
       font-weight: 400;
@@ -118,8 +123,6 @@
       color: @white;
       display: block;
       width: 165px;
-      top: 171px;
-      right: 40px;
     }
   }
 }

@@ -69,10 +69,10 @@
 
     &__text {
       margin-bottom: 50px;
-      width: 100%;
       font-size: 16px;
       line-height: 1.5;
       margin-left: 0;
+      width: 701px;
     }
   }
 }
@@ -80,8 +80,12 @@
 @media (min-width: @desktop-width) {
   .example {
     position: relative;
+    margin-top: 130px;
+    background-color: @grey-back;
+    min-height: 462px;
 
     &__wrapper-all {
+      position: relative;
       width: 1220px;
       margin: 0 auto;
       display: flex;
@@ -90,6 +94,7 @@
     &__wrapper {
       margin: 0;
       margin-right: 180px;
+      margin-top: -129px;
     }
 
     &__title {
@@ -100,7 +105,7 @@
 
     &__text {
       margin-left: 0;
-      margin-bottom: 71px;
+      margin-bottom: 67px;
       margin-right: 30px;
       width: 435px;
       color: @greyish-brown;
@@ -110,16 +115,5 @@
     &__tablet-br {
       display: none;
     }
-  }
-
-  .example::before {
-    content: "";
-    width: 100%;
-    min-height: 462px;
-    background-color: @grey;
-    position: absolute;
-    top: 130px;
-    left: 0;
-    z-index: 0;
   }
 }

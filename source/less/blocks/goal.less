@@ -10,6 +10,7 @@
     padding-left: 46px;
     position: relative;
     text-transform: uppercase;
+    display: block;
   }
 
   &__label:active {
@@ -24,7 +25,7 @@
     background-color: @white;
     position: absolute;
     left: 0;
-    top: -3px;
+    top: -6px;
   }
 
   &__radio::before {
@@ -38,6 +39,15 @@
     left: 8px;
     display: none;
   }
+}
+
+.goal:nth-child(1),
+.goal:nth-child(2) {
+  width: 180px;
+}
+
+.goal:nth-child(3) {
+  width: 235px;
 }
 
 input[type="radio"]:checked + .goal__radio::before {
@@ -63,6 +73,7 @@ input[type="radio"]:focus ~ .goal__radio {
     &__radio {
       width: 40px;
       height: 40px;
+      top: -10px;
     }
 
     &__radio::before {
@@ -71,5 +82,9 @@ input[type="radio"]:focus ~ .goal__radio {
       top: 10px;
       left: 10px;
     }
+  }
+
+  .goal:nth-child(3) {
+    width: 300px;
   }
 }

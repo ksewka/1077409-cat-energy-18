@@ -17,6 +17,7 @@
     text-transform: uppercase;
     margin-top: 13px;
     margin-bottom: 0;
+    width: 140px;
   }
 
   &__field,
@@ -27,6 +28,15 @@
     line-height: 1;
     text-align: left;
     color: @greyish-brown;
+  }
+
+  &__field {
+    width: 125px;
+  }
+
+  &__price {
+    width: 50px;
+    text-align: right;
   }
 
   &__value {
@@ -79,10 +89,15 @@
     &__price {
       font-size: 16px;
       line-height: 1.25;
+      text-align: right;
+    }
+
+    &__field {
+      width: 145px;
     }
 
     &__price {
-      margin-left: 52px;
+      margin-left: 42px;
     }
 
     &__order {
@@ -101,6 +116,15 @@
 
     &__title {
       margin-right: auto;
+      width: 285px;
+    }
+
+    &__field {
+      text-align: left;
+    }
+
+    &__price {
+      width: 45px;
     }
 
     &__order {

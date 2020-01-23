@@ -13,6 +13,17 @@
     color: @black-one;
     margin-top: 14px;
     margin-bottom: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 163px;
+      width: 137px;
+      height: 3px;
+      background-color: @leaf;
+    }
   }
 
   &__list {
@@ -22,7 +33,7 @@
   }
 
   &__item {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
   }
 
   &__label {
@@ -35,6 +46,8 @@
     position: relative;
     padding-left: 46px;
     text-transform: uppercase;
+    display: block;
+    width: 190px;
   }
 
   &__label:active {
@@ -43,7 +56,7 @@
 
   &__checkbox {
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
     width: 30px;
     height: 30px;
@@ -88,6 +101,22 @@ input[type="checkbox"]:focus ~ .excess__checkbox {
       margin-bottom: 66px;
       margin-top: 20px;
       margin-left: 39px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -69px;
+        width: 30px;
+        height: 3px;
+        background-color: @leaf;
+      }
+
+      &::after {
+        width: 447px;
+        top: 20px;
+        left: 252px;
+      }
     }
 
     &__label {
@@ -100,7 +129,7 @@ input[type="checkbox"]:focus ~ .excess__checkbox {
     &__checkbox {
       width: 40px;
       height: 40px;
-      top: -5px;
+      top: -10px;
     }
 
     &__checkbox::before {
@@ -111,7 +140,7 @@ input[type="checkbox"]:focus ~ .excess__checkbox {
     &__list {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 11px;
+      margin-bottom: 15px;
     }
 
     &__item {
@@ -130,6 +159,17 @@ input[type="checkbox"]:focus ~ .excess__checkbox {
     &__caption {
       margin-left: 0;
       margin-top: 23px;
+
+      &::before {
+        width: 70px;
+        top: 22px;
+        left: -110px;
+      }
+
+      &::after {
+        width: 1079px;
+        top: 22px;
+      }
     }
 
     &__list {
@@ -154,7 +194,7 @@ input[type="checkbox"]:focus ~ .excess__checkbox {
     }
 
     &__checkbox {
-      top: 0;
+      top: -9px;
     }
   }
 }

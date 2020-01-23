@@ -31,11 +31,14 @@
         </picture>
       </a>
 
+      <!--класс main-nav--nojs состяние главного меню без javascript
+класс main-nav--opened раскрытое гл.меню в мобильной версии
+класс main-nav--closed гл.меню в свернутом виде в мобильной версии-->
       <nav class="page-header__main-nav main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button" name="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list list">
           <li class="list__item">
-            <a class="list__link" href="index.html">Главная</a>
+            <a class="list__link"  href="index.html">Главная</a>
           </li>
           <li class="list__item">
             <a class="list__link" href="catalog.html">Каталог продукции</a>
@@ -109,7 +112,7 @@
             </fieldset>
           </div>
           <fieldset class="request__contacts contacts">
-            <legend class="contacts__title">Контактные данные<br>(владельца кота)</legend>
+            <h2 class="contacts__title">Контактные данные<br>(владельца кота)</h2>
             <ul class="contacts__list">
               <li class="contacts__item">
                 <label class="contacts__label contacts__label--email" for="email">E-mail:*</label>
@@ -129,7 +132,7 @@
           </fieldset>
 
           <fieldset class="request-message message">
-            <legend class="message__title">Комментарий</legend>
+            <h2 class="message__title">Комментарий</h2>
             <textarea class="message__textarea" name="message" rows="7" cols="45" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
@@ -193,17 +196,19 @@
     <section class="page-main__address address">
       <div class="address__wrapper">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+        <div class="address__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
-          <img class="address__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-        </picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+            <img class="address__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+          </picture>
+        </div>
       </div>
-      <iframe class="address__map" src="https://yandex.ru/map-widget/v1/-/CKAizMKI" width="100%" height="400"></iframe>
+      <iframe class="address__map" src="https://yandex.ru/map-widget/v1/-/CKAizMKI" width="100%" height="365"></iframe>
     </section>
   </main>
 
